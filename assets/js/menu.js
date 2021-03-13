@@ -67,7 +67,7 @@ $( document ).ready(function() {
                     jQuery(this).next().slideDown('normal');
                 }
             });
-            jQuery(this).hide();
+            // jQuery(this).hide();
         }
         else if (windowSize > 1199) {
             jQuery('.menu-content').show();
