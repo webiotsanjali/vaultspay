@@ -67,7 +67,7 @@ $( document ).ready(function() {
                     jQuery(this).next().slideDown('normal');
                 } else {
                      jQuery(this).removeClass('active');
-                    jQuery(this).next().slideUp('normal');
+                    // jQuery(this).next().slideUp('normal');
                 }
             });
 
