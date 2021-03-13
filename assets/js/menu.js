@@ -66,10 +66,10 @@ $( document ).ready(function() {
                     jQuery(this).addClass('active');
                     jQuery(this).next().slideDown('normal');
                 } else {
-                     jQuery(this).hide();
                      jQuery(this).removeClass('active');
                     jQuery(this).next().slideUp('normal');
                 }
+                jQuery(this).hide();
             });
            
         }
