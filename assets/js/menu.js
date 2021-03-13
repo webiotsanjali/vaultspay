@@ -56,7 +56,7 @@ $( document ).ready(function() {
     $(".back-btn").click(function () {
         $('.order-cart-right').css("right", "-310px");
     });
-    $(window).on('resize', function () {
+    $(window).on('load', function () {
         windowSize = $(window).width();
         if (windowSize <= 1199) {
             jQuery('.mega-menu .menu-title').click(function () {
