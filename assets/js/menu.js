@@ -57,20 +57,18 @@ $( document ).ready(function() {
         $('.order-cart-right').css("right", "-310px");
     });
     $(window).on('load', function () {
-        windowSize = $(window).width();
-        if (windowSize <= 1199) {
-            jQuery('.mega-menu .menu-title').click(function () {
-                jQuery(this).removeClass('active');
-                jQuery(this).next().slideUp('normal');
-                if (jQuery(this).next().is(':hidden') == true) {
-                    jQuery(this).addClass('active');
-                    jQuery(this).next().slideDown('normal');
-                }
-            });
-            jQuery(this).hide();
-        }
-        else if (windowSize > 1199) {
-            jQuery('.menu-content').show();
-        }
-    }).resize();
+    });
+    windowSize = $(window).width();
+    if (windowSize <= 1199) {
+        jQuery('.mega-menu .menu-title').click(function () {
+            jQuery(this).removeClass('active');
+            jQuery(this).next().slideUp('normal');
+            if (jQuery(this).next().is(':hidden') == true) {
+                jQuery(this).addClass('active');
+                jQuery(this).next().slideDown('normal');
+            }
+        });
+        jQuery(this).hide();
+    }$( document ).ready(function() {ontent').show();
+    }
 });
