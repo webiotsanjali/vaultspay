@@ -1,0 +1,74 @@
+/**=====================
+     payment page css start
+==========================**/
+.payment-section {
+    position: relative;
+    .shape-payment {
+        position: absolute;
+        top: 0;
+        left: 0;
+        [dir="rtl"] & {
+            left: unset;
+            right: 0;
+        }
+        @include mq-max(xl) {
+            width: 50%;
+        }
+        @include mq-max(md) {
+            top: 370px;
+        }
+    }
+    .shape-payment1 {
+        position: absolute;
+        top: -250px;
+        left: 0;
+        width: 40%;
+        [dir="rtl"] & {
+            left: unset;
+            right: 0;
+        }
+    }
+    .build-image {
+        @include mq-max(xl) {
+            margin: 0 auto;
+        }
+    }
+}
+.odd-even-wrapper {
+    > .row {
+        align-items: center;
+        + .row {
+            padding-top: calc(40px + (60 - 40) * ((100vw - 320px) / (1920 - 320)));
+        }
+        > .text-right {
+            @include mq-max(md) {
+                order: -1;
+                text-align: center !important;
+            }
+        }
+        > .text-center {
+            @include mq-max(md) {
+                order: -1;
+            }
+        }
+        .payment-img {
+            @include mq-max(md) {
+                margin-bottom: 20px;
+            }
+        }
+    }
+    .payment-content {
+        h3 {
+            font-weight: 700;
+            margin-bottom: 20px;
+            @include mq-max(md) {
+                margin-bottom: 10px;
+            }
+        }
+        p {
+            font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (1920 - 320)));
+            line-height: 1.35;
+        }
+    }
+
+}

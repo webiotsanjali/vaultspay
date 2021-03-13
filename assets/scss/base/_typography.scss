@@ -1,0 +1,113 @@
+/**=====================
+    Typography css start
+==========================**/
+
+body {
+    background-color: $white;
+    font-size: 14px;
+    overflow-x: hidden;
+    font-family:'Open Sans',sans-serif;
+}
+
+ul {
+    padding-left: 0;
+    list-style-type: none;
+    margin-bottom: 0;
+    padding-right: 0;
+}
+
+::-moz-selection {
+    color: $white;
+    background: $primary-color;
+}
+
+::selection {
+    color: $white;
+    background: $primary-color;
+}
+
+* a {
+    color: $primary-color;
+    text-decoration: none !important;
+}
+
+:focus {
+    outline-color: transparent;
+    text-decoration: none !important;
+    box-shadow: none !important;
+}
+
+select {
+    &:focus {
+        outline: none !important;
+    }
+}
+
+// //Typography css start
+h1 {
+    font-size: calc(28px + (50 - 28) * ((100vw - 320px) / (1920 - 320)));
+    font-weight: 700;
+    margin: 0;
+    text-transform: capitalize;
+}
+
+h2 {
+    font-size:  calc(22px + (42 - 22) * ((100vw - 320px) / (1920 - 320)));
+    font-weight: 700;
+    margin: 0;
+    color: $font-dark;
+}
+
+h3 {
+    font-size: calc(20px + (25 - 20) * ((100vw - 320px) / (1920 - 320)));
+    margin: 0;
+}
+
+h4 {
+    font-size: calc(18px + (28 - 18) * ((100vw - 320px) / (1920 - 320)));
+    font-weight: 400;
+    margin: 0;
+}
+
+// h5 {
+//     font-family: $font-2;
+//     font-size: $h5-size;
+//     margin: 0;
+//     font-weight: 400;
+// }
+
+h6 {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0;
+    line-height: 24px;
+}
+
+// span {
+//     font-family: $font-1;
+//     // font-size: $h6-size;
+// }
+
+p {
+    font-size:  calc(16px + (22 - 16) * ((100vw - 320px) / (1920 - 320)));
+    font-weight: 400;
+    margin: 0;
+    line-height: calc(26px + (30 - 26) * ((100vw - 320px) / (1920 - 320)));
+    color: $font-darker;
+}
+
+// a {
+//     &:hover,
+//     &:focus {
+//         text-decoration: none;
+//         outline: none;
+//         color: $theme-color;
+//     }
+// }
+
+// button {
+//     &:focus {
+//         outline: none;
+//     }
+// }
+

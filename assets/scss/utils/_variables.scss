@@ -1,0 +1,58 @@
+/**=====================
+    default variables
+==========================**/
+
+//color variables
+$black: #000000;
+$white: #ffffff;
+$font-darker: #444040;
+$font-dark: #373636;
+$font-light: #737373;
+$dark-bg: #48494E;
+$font-black-color: #252B42;
+$input-border: #B4BEC8;
+$placeholder: #858B9E;
+$light-bg: #F4F5F7;
+$header-dark: #555050;
+
+
+// Default colors
+$primary-color: #059BC7;
+$secondary-color: #43AF66;
+
+
+// social colors
+$twitter: #00acee;
+$facebook: #3b5998;
+$linkedin: #0e76a8;
+
+// A map of breakpoints.
+$min-breakpoints: (  
+  // xxl: 1460px,
+  // xxxl: 1630px,
+  xl:1199px,
+  2xl: 1367px,
+  3xl: 1460px,
+  4xl: 1630px,
+);
+
+$max-breakpoints: (
+  // xxs: 420px,
+  // xs: 576px,
+  // sm: 767px,
+  // md: 991px,
+  // lg: 1199px,
+  // xl: 1367px,
+  // xxl: 1460px,
+  // xxxl: 1630px,
+  2xs: 360px,
+  xs: 420px,
+  sm: 576px,
+  md: 767px,
+  lg: 991px,
+  xl:1199px,
+  2xl: 1367px,
+  3xl: 1460px,
+  4xl: 1630px,
+);
+

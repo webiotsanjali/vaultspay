@@ -1,0 +1,347 @@
+/**=====================
+     about page css start
+==========================**/
+.about-page {
+    position: relative;
+    .about-page-content {
+        position: absolute;
+        width: 100%;
+        bottom: -28px;
+        z-index: 1;
+        @include mq-max(3xl) {
+            bottom: -80px;
+        }
+        @include mq-max(lg) {
+            bottom: 0;
+            position: relative;
+            margin-top: 30px;
+        }
+        .about-wrapper {
+            margin-top: 60px;
+            @include mq-max(xl) {
+                margin-top: 22px;
+            }
+            .about-box {
+                width: 68%;
+                margin: 0 auto;
+                padding: 30px 60px;
+                text-align: center;
+                background-color: $white;
+                box-shadow: 0px 4px 12px rgba($black, 0.38);
+                border-radius: 12px;
+                .about-img {
+                    min-height: 100px;
+                    margin-bottom: 35px;
+                    @include mq-max(xl) {
+                        min-height: 70px;
+                        margin-bottom: 15px;
+                    }
+                    @include mq-max(lg) {
+                        min-height: 80px;
+                    }
+                    @include mq-max(xs) {
+                        min-height: 60px;
+                    }
+                    img {
+                        @include mq-max(xl) {
+                            width: 42%;
+                        }
+                        @include mq-max(lg) {
+                            width: 28%;
+                        }
+                        @include mq-max(md) {
+                            width: 35%;
+                        }
+                        @include mq-max(xs) {
+                            width: 40%;
+                        }
+                        @include mq-max(2xs) {
+                            width: 48%;
+                        }
+                    }
+                }
+                h4 {
+                    text-transform: capitalize;
+                }
+                @include mq-max(3xl){
+                    width: 100%;
+                }
+                @include mq-max(xl) {
+                    padding: 20px 20px;
+                }
+                @include mq-max(sm) {
+                    padding: 15px;
+                }
+            }
+        }
+    }
+}
+
+.about-section {
+    .about-left {
+        h3 {
+            line-height: 1.38;
+            color: $font-darker;
+        }
+        @include mq-max(lg) { 
+            margin-bottom: 40px;
+        }
+    }
+    &.about-2 {
+        padding-bottom: 200px;
+        @include mq-max(xl) { 
+            padding-bottom: 0;
+        }
+        .about-content {
+            p {
+                margin-top: 15px;
+            }
+            ul {
+                margin-top: calc(25px + (55 - 25) * ((100vw - 320px) / (1920 - 320)));
+                li {
+                    &:after {
+                        top: 6px;
+                        transform: none;
+                    }
+                }
+            }
+        }
+        .about-bg {
+            position: absolute;
+            right: 0;
+            left: unset;
+            top: -210px;
+            @include rtl(text-align, right, left);
+            @include mq-max(3xl) {
+                top: -100px;
+            }
+            [dir="rtl"] & {
+                left: 0;
+                right: unset;
+            }
+            img {
+                width: 84%;
+                @include mq-max(3xl) {
+                    width: 60%;
+                }
+            }
+        }
+    }
+    .about-shape {
+        .aboutshape1 {
+            position: absolute;
+            top: -490px;
+            @include mq-max(4xl) {
+                top: -560px;
+                width: 50%;
+            }
+            @include mq-max(2xl) {
+                top: -170px;
+            }
+        }
+        .aboutshape2 {
+            position: absolute;
+            top: -340px;
+            left: 0;
+            width: 53%;
+            [dir="rtl"] & {
+                left: unset;
+                right: 0;
+            }
+            @include mq-max(4xl) {
+                width: 60%;
+            }
+            @include mq-max(2xl) {
+                width: 70%;
+            }
+            @include mq-max(sm) {
+                top: -90px;
+            }
+            @include mq-max(xs) {
+                top: 0;
+            }
+        }
+        .aboutshape3 {
+            position: absolute;
+            top: -120px;
+            left: 0;
+            [dir="rtl"] & {
+                left: unset;
+                right: 0;
+            }
+            @include mq-max(4xl) {
+                width: 60%;
+            }
+            @include mq-max(2xl) {
+                width: 70%;
+            }
+            @include mq-max(sm) {
+                top: -90px;
+            }
+            @include mq-max(xs) {
+                top: 0;
+            }
+        }
+    }
+}
+
+.mission-section {
+    position: relative;
+    overflow: hidden;
+    padding-top: calc(30px + (120 - 30) * ((100vw - 320px) / (1920 - 320)));
+    padding-bottom: 25%;
+    .mission-frame {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        img {
+            @include mq-max(lg) {
+                opacity: 0.5;
+            }
+        }
+    }
+    .shape-1 {
+        position: absolute;
+        right: 0;       
+    }
+    .shape-2 {
+        position: absolute;
+        left: 0;
+        top: 16%;
+    }
+    @include mq-max(3xl) {
+        padding-top: 140px;
+    }
+    @include mq-max(lg) {
+        padding-bottom: 10%;
+        padding-top: calc(30px + (120 - 30) * ((100vw - 320px) / (1920 - 320)));
+    }
+}
+
+.mission-row {
+    .mission-content {
+        margin-top: 90px;
+        @include mq-max(xl) {
+            margin-top: 40px;
+            display: flex;
+            align-items: center;
+            height: 100%;
+        }
+        @include mq-max(lg) {
+            margin-top: 20px;
+            align-items: unset;
+        }
+        h2 {
+            margin-bottom: 20px;
+            color: $font-darker;
+        }
+        p {
+            font-size: calc(16px + (18 - 16) * ((100vw - 320px) / (1920 - 320)));
+            font-weight: 400;
+            line-height: calc(20px + (24 - 20) * ((100vw - 320px) / (1920 - 320)));
+            @include mq-max(lg) {
+                text-align: justify;
+            }
+        }
+    }
+    &:first-child {
+        .mission-content {
+            margin-top: 0;
+            @include mq-max(lg) {
+                margin-top: 20px;
+            }
+        }
+        .mission-card {
+            margin-top: 0;
+            @include mq-max(xl) {
+                margin-top: 20px;
+            }
+        }
+    }
+    &:nth-child(odd) {
+        .mission-content {
+            padding-right: 50px;
+            @include mq-max(xl) {
+                padding-right: 0;
+            }
+        }
+    }
+    &:nth-child(even) {
+        .mission-content {
+            padding-left: 50px;
+            @include mq-max(xl) {
+                padding-left: 0;
+            }
+        }
+    }
+}
+
+.mission-card {
+    padding: 48px;
+    height: 400px;
+    background-color: $white;
+    box-shadow: 5px 20px 50px rgba(74, 153, 211, 0.2);
+    border-radius: 10px;
+    margin-top: -50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .main-img {
+        margin-bottom: 60px;
+        @include mq-max(3xl) {
+            margin-bottom: 30px;
+        }
+    }
+    @include mq-max(3xl) {
+        padding: 28px;
+        margin-top: -20px;
+    }
+    @include mq-max(xl) {
+        margin-top: 40px;
+    }
+    @include mq-max(lg) {
+        height: auto;
+    }
+    @include mq-max(md) {
+        margin-top: 20px;
+    }
+}
+
+.our-values {
+    @include mq-max(lg) {
+        margin-top: calc(30px + (100 - 30) * ((100vw - 320px) / (1920 - 320)));
+    }
+    h2 {
+        color: $font-darker;
+        text-transform: capitalize;
+        margin-bottom: 20px;
+    }
+    h3 {
+        font-weight: 700;
+        line-height: calc(30px + (64 - 30) * ((100vw - 320px) / (1920 - 320)));
+    }
+    h4 {
+        font-size: calc(16px + (18 - 16) * ((100vw - 320px) / (1920 - 320)));
+        line-height: calc(20px + (24 - 20) * ((100vw - 320px) / (1920 - 320)));
+    }
+    .values-sec {
+        padding-left: 80px;
+        margin-bottom: 20px;
+        ul {
+            margin-top: 20px;
+            li {
+                display: list-item;
+                list-style: disc;
+                + li {
+                    margin-top: 15px;
+                }
+            }
+        }
+        @include mq-max(2xl) {
+            padding-left: 40px;
+        }
+        @include mq-max(xl) {
+            padding-left: 0;
+        }
+    }
+}

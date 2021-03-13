@@ -1,0 +1,86 @@
+/**=====================
+     footer css start
+==========================**/
+footer {
+    background-color: $dark-bg;
+    padding: calc(40px + (130 - 40) * ((100vw - 320px) / (1920 - 320))) 0;
+    .footer-main {
+        padding-bottom: calc(20px + (60 - 30) * ((100vw - 320px) / (1920 - 320)));
+        border-bottom: 1px solid $white;
+        margin-bottom: calc(20px + (80 - 30) * ((100vw - 320px) / (1920 - 320)));
+    }
+    .footer-logo {
+        @include mq-max(md) {
+            margin-bottom: 20px;
+        }
+    }
+    .footer-links {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        li {
+            font-size: calc(16px + (18 - 16) * ((100vw - 320px) / (1920 - 320)));
+            font-weight: 500;
+            a {
+                color: $white;
+            }
+            @include mq-max(md) {
+                margin-bottom: 12px;
+            }
+            @include mq-max(sm) {
+                display: block;
+                margin-bottom: 8px;
+            }
+        }
+        @include mq-max(sm) {
+            display: block;
+        }
+    }
+    .footer-bottom {
+        display: flex;
+        align-items: center;
+        @include mq-max(md) {
+            display: block;
+        }
+        .social-icons {
+            display: flex;
+            align-items: center;
+            @include mq-max(md) {
+                margin-bottom: 15px;
+            }
+            li {
+                margin-right: 64px;
+                transition: all 0.5s ease;
+                a {
+                    img {
+                        @include mq-max(sm) {
+                            height: 20px;
+                        }
+                    }
+                }
+                @include mq-max(lg) {
+                    margin-right: 34px;
+                }
+                @include mq-max(md) {
+                    margin-right: 24px;
+                }
+                &:hover {
+                    opacity: 0.64;
+                    transition: all 0.5s ease;
+                }
+            }
+        }
+        .copyright {
+            font-size: calc(16px + (20 - 16) * ((100vw - 320px) / (1920 - 320)));
+            color: $white;
+            margin-left: auto;
+            @include mq-max(lg) {
+                font-size: 18px;
+            }
+            @include mq-max(sm) {
+                font-size: 16px;
+                line-height: 26px;
+            }
+        }
+    }
+}

@@ -1,0 +1,81 @@
+/**=====================
+     Reset css start
+==========================**/
+
+section, .section-t-space {
+    padding-top: calc(30px + (80 - 30) * ((100vw - 320px) / (1920 - 320)))
+}
+
+.section-b-space {
+    padding-bottom: calc(30px + (80 - 30) * ((100vw - 320px) / (1920 - 320)))
+}
+
+.sm-pt-space {
+    padding-top: calc(30px + (50 - 30) * ((100vw - 320px) / (1920 - 320)))
+}
+
+.sm-pb-space {
+    padding-bottom: calc(30px + (50 - 30) * ((100vw - 320px) / (1920 - 320)));
+}
+
+.space-bottom {
+    margin-bottom: calc(-30px + (-60 - -30) * ((100vw - 320px) / (1920 - 320)));
+    > div {
+        margin-bottom: calc(30px + (60 - 30) * ((100vw - 320px) / (1920 - 320)));
+    }
+}
+.margin-deafult {
+    margin-bottom: -25px;
+    > div {
+        margin-bottom: 25px;
+    }
+}
+
+.font-red {
+    color: red;
+}
+
+.container-padding {
+    padding: 0 calc(15px + (80 - 15) * ((100vw - 320px) / (1920 - 320)));
+}
+
+.gy-5 {
+    margin: 0 -30px;
+    > div {
+        padding: 0 30px;
+    }
+}
+
+
+@include mq-min(3xl) {
+    .custom-container {
+        max-width: 1430px;
+    }
+}
+
+
+@include mq-min(4xl) {
+    .custom-container {
+        max-width: 1600px;
+    }
+}
+
+@include mq-min(xl) {
+    .gy-xl-5 {
+        margin: 0 -15px;
+        > * {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+    }
+}
+
+@include mq-min(3xl) {
+    .gy-3xl-5 {
+        margin: 0 -20px calc(-30px + (-60 - -30) * ((100vw - 320px) / (1920 - 320)));
+        > * {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
+}

@@ -1,0 +1,88 @@
+/*=====================
+ select css start
+==========================*/
+.form-control {
+  font-family: 'Roboto', sans-serif;
+  &::placeholder {
+    color: #858B9E;
+    opacity: 0.8;
+  }
+}
+.custom-select {
+  position: relative;
+  font-family: Arial;
+  padding: initial;
+  height: auto;
+  border: 1px solid $input-border;
+  font-family: 'Roboto', sans-serif;
+}
+.custom-select select {
+  display: none; /*hide original SELECT element:*/
+}
+
+.select-selected {
+  background-color: $white;
+  color: $black;
+}
+
+/*style the arrow inside the select element:*/
+.select-selected:after {
+  position: absolute;
+  font-family: "Font Awesome 5 free";
+  font-weight: 600;
+  color: $font-darker;
+  content: "\f078";
+  top: 20px;
+  right: 33px;
+  width: 0;
+  height: 0;
+}
+
+/*point the arrow upwards when the select box is open (active):*/
+.select-selected.select-arrow-active:after {
+    content: "\f077";
+}
+
+/*style the items (options), including the selected item:*/
+.select-items div,.select-selected {
+  color: $black;
+  padding: 20px;
+  cursor: pointer;
+  user-select: none;
+}
+.select-selected {
+    border-radius: 4px;
+}
+
+.select-items div {
+    padding: 10px;
+}
+
+/*style items (options):*/
+.select-items {
+  position: absolute;
+  background-color: $white;
+  color: $black;
+  top: 110%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  padding: 15px;
+  border-radius: 4px;
+  box-shadow: 3px 1px 12px rgba(0, 0, 0, 0.49);
+  > div {
+      border: none;
+      + div {
+          border-top: 1px solid $input-border;
+      }
+  }
+}
+
+/*hide the items when the select box is closed:*/
+.select-hide {
+  display: none;
+}
+
+// .select-items div:hover, .same-as-selected {
+//   background-color: rgba(0, 0, 0, 0.1);
+// }

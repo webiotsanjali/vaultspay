@@ -1,0 +1,85 @@
+/**=====================
+     app css start
+==========================**/
+.app-section {
+    position: relative;
+    .shape-app {
+        position: absolute;
+        right: 0;
+        top: -530px;
+        z-index: -1;
+        [dir=rtl] & {
+            right: unset;
+            left: 0;
+        }
+        @include mq-max(4xl) { 
+            width: 70%;
+        }
+        @include mq-max(md) {
+            top: -300px;
+        }
+    }
+    .shape-app1 {
+        position: absolute;
+        left: 0;
+        top: -680px;
+        z-index: -1;
+        [dir="rtl"] & {
+            left: unset;
+            right: 0;
+        }
+        @include mq-max(2xl) {
+            width: 50%;
+        }
+    }
+    .app-content {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        h2 {
+            color: $font-darker;
+            text-transform: capitalize;
+            margin-bottom: 14px;
+        }
+        h3 {
+            color: $black;
+            line-height: calc(30px + (34 - 30) * ((100vw - 320px) / (1920 - 320)));
+            margin-bottom:  calc(18px + (30 - 18) * ((100vw - 320px) / (1920 - 320)));
+        }
+        .input-group {
+            margin-bottom: calc(20px + (50 - 20) * ((100vw - 320px) / (1920 - 320)));
+            .code-cls {
+                max-width: 64px;
+            }
+            .form-control {
+                color: $black;
+                border-color: #909090;
+                border-radius: 0;
+                height: auto;
+                padding:  calc(13px + (18 - 13) * ((100vw - 320px) / (1920 - 320))) calc(10px + (16 - 10) * ((100vw - 320px) / (1920 - 320)));
+            }
+            .btn {
+                border-radius: 0;
+                padding: calc(10px + (15 - 10) * ((100vw - 320px) / (1920 - 320))) calc(15px + (42 - 15) * ((100vw - 320px) / (1920 - 320)));
+                box-shadow: none;
+                text-transform: none;
+                font-weight: 400;
+            }
+        }
+        .app-buttons {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            li {
+                margin-left: 15px;
+                [dir=rtl] & {
+                    margin-left: 0;
+                    margin-right: 15px;
+                }
+            }
+        }
+        @include mq-max(md) {
+            margin: 20px 0;
+        }
+    }
+}

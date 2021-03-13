@@ -1,0 +1,122 @@
+/**=====================
+     partners css start
+==========================**/
+.partners-section {
+    .title-section {
+        margin-bottom: calc(30px + (66 - 30) * ((100vw - 320px) / (1920 - 320)));
+        p {
+            line-height: calc(28px + (35 - 28) * ((100vw - 320px) / (1920 - 320)));
+            max-width: 70%;
+            margin: 0 auto;
+            @include mq-max(2xl) {
+                max-width: 100%;
+            }
+        }
+    }
+    .partners {
+        position: relative;
+        overflow: hidden;
+        padding-bottom: calc(30px + (50 - 30) * ((100vw - 320px) / (1920 - 320)));
+        &:after, &:before {
+            content: "";
+            position: absolute;
+            left: -15px;
+            width: 120px;
+            top: 0;
+            z-index: 1;
+            height: 110px;
+            background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(248,248,248,1) 100%);
+            opacity: 0.6;
+        }
+        &:before {
+            left: unset;
+            right: -15px;
+        }
+    }
+    .partner-box {
+        background-color: rgba(#222222, 0.03);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        height: 110px;
+    }
+    .slick-list {
+        margin: 0 -15px;
+    }
+    .prev-arrow, .next-arrow {
+        position: absolute;
+        bottom: 0;
+        cursor: pointer;
+        color: rgba(#222, 0.3);
+    }
+    .prev-arrow {
+        left: 47.8%;
+        transform: translateX(-47.8%);
+        @include mq-max(3xl) {
+            left: 47%;
+            transform: translateX(-47%);
+        }
+        @include mq-max(xl) {
+            left: 46%;
+            transform: translateX(-46%);
+        }
+        @include mq-max(lg) {
+            left: 44.8%;
+            transform: translateX(-44.8%);
+        }
+        @include mq-max(md) {
+            left: 44%;
+            transform: translateX(-44%);
+        }
+        @include mq-max(sm) {
+            left: 43%;
+            transform: translateX(-43%);
+        }
+        @include mq-max(xs) {
+            left: 40%;
+            transform: translateX(-40%);
+        }
+    }
+    .next-arrow {
+        right: 47%;
+        transform: translateX(-47%);
+        @include mq-max(3xl) {
+            right: 46%;
+            transform: translateX(-46%);
+        }
+        @include mq-max(xl) {
+            right: 45%;
+            transform: translateX(-45%);
+        }
+        @include mq-max(lg) {
+            right: 43%;
+            transform: translateX(-43%);
+        }
+        @include mq-max(md) {
+            right: 42%;
+            transform: translateX(-42%);
+        }
+        @include mq-max(sm) {
+            right: 41%;
+            transform: translateX(-41%);
+        }
+        @include mq-max(xs) {
+            right: 38%;
+            transform: translateX(-38%);
+        }
+    }
+    .slick-slide {
+        > div {
+            margin: 0 15px;
+        }
+    }
+    .slide-count-wrap {
+        text-align: center;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        color: rgba(#222, 0.3);
+        margin-top: -22px;
+    }
+}

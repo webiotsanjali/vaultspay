@@ -1,0 +1,14 @@
+/**=====================
+     help section css start
+==========================**/
+.help-bg {
+    background-image: url(../images/help-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    background-position: bottom;
+    padding: calc(50px + (100 - 50) * ((100vw - 320px) / (1920 - 320))) 0;
+    h2 {
+        color: $white;
+    }
+}

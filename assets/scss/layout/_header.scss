@@ -1,0 +1,671 @@
+/**=====================
+     header css start
+==========================**/
+header {
+     .main-menu {
+          display: flex;
+          align-items: center;
+          .brand-logo {
+               img {
+                    @include mq-max(sm) {
+                         width: 130px;
+                    }
+               }
+          }
+     }
+     .main-navbar {
+          padding: 26px 0;
+          .nav-menu {
+               display: inline-block;
+               list-style: none;
+               margin: 0;
+               padding: 0;
+               line-height: normal;
+               direction: ltr;
+               text-align: left;
+               vertical-align: middle;
+
+               > li {
+                    position: relative;
+                    float: left;
+                    display: block;
+                    padding: 0 30px;
+                    @include mq-max(2xl) {
+                         padding: 0 20px;
+                    }
+                    > a {
+                         display: block;
+                         text-decoration: none;
+                         position: relative;
+                         padding-top: 0;
+                         padding-bottom: 0;
+                         line-height: 1.3;
+                         font-size: 18px;
+                         line-height: 24px;
+                         color: rgba($font-darker, 0.95);
+                         text-transform: uppercase;
+                         font-weight: 600;
+                         transition: all 0.5s ease;
+                         padding: 0;
+                         border-bottom: 2px solid transparent;
+                         @include mq-max(xl) {
+                              border-bottom: 0;
+                         }
+                    }
+
+                    .nav-submenu {
+                         position: absolute;
+                         left: 0;
+                         z-index: 1;
+                         box-shadow: 0 1px 5px 0 rgba(90, 90, 90, 0.2);
+                         padding: 15px 0 15px 0;
+                         background: white;
+
+                         li {
+                              border: 0;
+                              float: none;
+                              position: relative;
+                              display: block;
+
+                              a {
+                                   border: 0 !important;
+                                   background: transparent;
+                                   color: $black;
+                                   border-radius: 0 !important;
+                                   font-size: 14px;
+                                   font-weight: 500;
+                                   text-transform: capitalize;
+                                   padding: 2px 25px;
+                                   display: block;
+                                   letter-spacing: 0.07em;
+                                   line-height: 1.9;
+                                   transition: all 0.5s ease;
+                                   position: relative;
+
+                                   &:after {
+                                        position: absolute;
+                                        content: "\f105";
+                                        font-family: "Font Awesome 5 Free";
+                                        font-weight: 600;
+                                        right: 18px;
+                                        opacity: 0;
+                                        font-size: 14px;
+                                        top: 3px;
+                                   }
+
+                                   &.menu-title-level1,
+                                   &.submenu-title {
+                                        &:after {
+                                             opacity: 1;
+                                        }
+                                   }
+
+                                   &.arrow-cls {
+                                        &:after {
+                                             opacity: 0.8;
+                                        }
+                                   }
+
+                                   &:hover {
+                                        margin-left: 3px;
+                                        color: $primary-color !important;
+                                   }
+                              }
+
+                              .nav-sub-childmenu {
+                                   position: absolute;
+                                   width: 200px;
+                                   right: -200px;
+                                   top: 0;
+                                   background: $white;
+                                   border: none;
+                                   padding: 15px 0 15px 0;
+                                   box-shadow: 0 0 1px 0 #ebebeb;
+                              }
+                         }
+                    }
+
+                    .mega-menu-container {
+                         position: absolute;
+                         left: 50%;
+                         z-index: 4;
+                         box-shadow: 0 1px 5px 0 rgba(90, 90, 90, 0.2);
+                         padding: 30px;
+                         background: white;
+                         width: max-content;
+                         border-radius: 10px;
+                         transform: translateX(-50%);
+
+                         @include mq-max(xl) {
+                              width: 100%;
+                              position: relative;
+                              left: 0;
+                              border-radius: 0;
+                              transform: none;
+                              box-shadow: none;
+                         }
+
+                         .mega-box {
+                              .link-section {
+                                   padding-left: 0;
+                                   position: relative;
+
+                                   @include mq-max(xl) {
+                                        padding-left: 16px;
+                                   }
+                                   .submenu-title {
+                                        a {
+                                             font-weight: 600;
+                                             text-transform: capitalize;
+                                             font-size: calc(15px + (17 - 15) * ((100vw - 320px) / (1920 - 320)));
+                                             color: $secondary-color;
+                                             margin-bottom: 6px;
+                                             display: block;
+                                             @include mq-max(xl) {
+                                                  margin-bottom: 0;
+                                             }
+                                        }
+                                   }
+
+                                   .submenu-content {
+                                        box-shadow: none;
+                                        background-color: transparent;
+                                        position: relative;
+                                        display: block;
+                                        padding: 0;
+
+                                        p {
+                                             font-size: calc(15px + (17 - 15) * ((100vw - 320px) / (1920 - 320)));
+                                             color: $black;
+                                             line-height: 18px;
+                                        }
+
+                                        ul {
+                                             li {
+                                                  border: 0;
+                                                  float: none;
+                                                  position: relative;
+                                                  display: block;
+
+                                                  a {
+                                                       border: 0 !important;
+                                                       background: transparent;
+                                                       color: $black;
+                                                       border-radius: 0 !important;
+                                                       font-size: 14px;
+                                                       font-weight: 500;
+                                                       text-transform: capitalize;
+                                                       padding: 3px 0;
+                                                       display: block;
+                                                       letter-spacing: 0.07em;
+                                                       line-height: 1.9;
+                                                       position: relative;
+
+                                                       &:hover {
+                                                            margin-left: 4px;
+                                                            color: $primary-color !important;
+                                                       }
+                                                  }
+
+                                                  &.highlight-link {
+                                                       position: relative;
+
+                                                       i {
+                                                            color: $primary-color;
+                                                       }
+                                                  }
+                                             }
+                                        }
+                                   }
+
+                                   + .link-section {
+                                        margin-top: 18px;
+                                   }
+                              }
+                         }
+
+                         &.two-grid {
+                              width: 60%;
+                              @include mq-max(xl) {
+                                   width: 100%;
+                              }
+                         }
+
+                         &.three-grid {
+                              width: 100%;
+                         }
+                    }
+
+                    &:hover {
+                         > a {
+                              color: $font-darker;
+                              border-bottom: 2px solid $font-darker;
+                              transition: all 0.5s ease;
+                              @include mq-max(xl) {
+                                   border-bottom: 0;
+                              }
+                         }
+                    }
+
+                    &.mega-menu {
+                         position: unset;
+                    }
+               }
+          }
+
+          @include mq-max(xl) {
+               padding: 20px 0;
+          }
+     }
+     nav {
+          margin: 0 auto;
+          @include mq-max(2xl) {
+               margin-right: 20px;
+          }
+          @include mq-max(xs) {
+               margin-right: 10px;
+          }
+     }
+     .account-setting {
+          ul {
+               display: flex;
+               align-items: center;
+               a {
+                    font-size: calc(15px + (18 - 15) * ((100vw - 320px) / (1920 - 320)));
+                    text-transform: uppercase;
+                    color: $font-darker;
+                    font-weight: 600;
+               }
+               select {
+                    border: 0;
+                    background-color: transparent;
+                    font-size: calc(15px + (18 - 15) * ((100vw - 320px) / (1920 - 320)));
+                    text-transform: uppercase;
+                    font-weight: 600;
+                    color: $font-darker;
+                    background: url(../svg/global/down.svg) no-repeat 95%;
+                    appearance: none;
+                    padding-right: 12px;
+                    cursor: pointer;
+               }
+               li {
+                    &:first-child {
+                         border-right: 1px solid $font-darker;
+                         margin-right: 10px;
+                         padding-right: 10px;
+                    }
+               }
+          }
+     }
+     .menu-main-title {
+          font-size: 18px;
+          font-weight: 600;
+          line-height: 28px;
+          display: block;
+          color: #0d0d0d;
+          margin-bottom: 16px;
+          text-transform: capitalize;
+          @include mq-max(xl) {
+               font-size: 14px;
+               margin-bottom: 0;
+               margin-left: 20px;
+               font-weight: 600;
+          }
+     }
+     &.header-dark {
+          background-color: $header-dark;
+          .toggle-nav {
+               color: $white;
+          }
+          .account-setting {
+               ul {
+                    a,  select{
+                         color: $white;
+                    }
+                    a {
+                         img {
+                              filter: brightness(0.5) invert(1);
+                         }
+                    }
+                    select {
+                         background: url(../svg/global/down-white.svg) no-repeat 95% $header-dark; 
+                    }
+                    li {
+                         &:first-child {
+                              border-right: 1px solid $white;
+                         }
+                    }
+               }
+          }
+     }
+}
+
+// Responsive menu css start //
+@media (min-width: 1200px) {
+     header {
+          .main-navbar {
+               .nav-menu {
+                    .back-btn {
+                         display: none;
+                    }
+                    > li {
+                         .nav-submenu {
+                              width: 220px;
+                              opacity: 0;
+                              visibility: hidden;
+                              border-radius: 5px;
+                              transition: all 0.5s ease;
+
+                              a {
+                                   .sub-arrow {
+                                        position: absolute;
+                                        right: 20px;
+                                        top: 7px;
+                                        color: rgba(0, 0, 0, 0.75);
+                                        font-size: 10px;
+                                        transition: all 0.5s ease;
+                                   }
+                              }
+
+                              li {
+                                   .level1 {
+                                        display: none;
+                                        border-radius: 4px;
+
+                                        li {
+                                             .level2 {
+                                                  display: none;
+                                                  border-radius: 4px;
+
+                                                  li {
+                                                       .level3 {
+                                                            display: none;
+                                                       }
+
+                                                       &:hover {
+                                                            .level3 {
+                                                                 display: block;
+                                                            }
+                                                       }
+                                                  }
+                                             }
+
+                                             &:hover {
+                                                  .level2 {
+                                                       display: block;
+                                                  }
+                                             }
+                                        }
+                                   }
+
+                                   &:hover {
+                                        .level1 {
+                                             display: block;
+                                        }
+                                   }
+
+                                   a {
+                                        &:hover {
+                                             .sub-arrow {
+                                                  right: 16px;
+                                                  color: $black;
+                                                  transition: all 0.5s ease;
+                                             }
+                                        }
+                                   }
+                              }
+                         }
+
+                         .mega-menu-container {
+                              opacity: 0;
+                              visibility: hidden;
+                              transition: all 0.5s ease;
+                              z-index: -1;
+                         }
+
+                         &:hover {
+                              .nav-submenu {
+                                   opacity: 1;
+                                   z-index: 4;
+                                   visibility: visible;
+                                   margin-top: 15px;
+                                   transition: all 0.5s ease;
+                              }
+
+                              .mega-menu-container {
+                                   opacity: 1;
+                                   visibility: visible;
+                                   margin-top: 35px;
+                                   transition: all 0.5s ease;
+                                   z-index: 4;
+                              }
+                         }
+                    }
+               }
+          }
+          &.header-dark {
+               .main-navbar {
+                    .nav-menu {
+                         > li {
+                              > a {
+                                   color: $white;
+                              }
+                              &:hover {
+                                   > a {
+                                        border-bottom: 2px solid $white;
+                                   }
+                              }
+                         }
+                    }
+               }
+          }
+     }
+}
+
+@media (max-width: 1199px) {
+     header {
+          .main-navbar {
+               .nav-menu {
+                    position: fixed;
+                    background-color: #fff;
+                    width: 300px;
+                    border-radius: 0;
+                    border: 1px solid #eee;
+                    top: 0;
+                    height: 100vh;
+                    right: -300px;
+                    z-index: 99;
+                    transition: all 0.3s ease;
+                    overflow: scroll;
+                    &.opennav {
+                         right: 0;
+                    }
+                    .back-btn {
+                         display: block;
+                         width: 100%;
+                         padding: 0;
+                         .mobile-back {
+                              padding: 20px;
+                              font-size: 18px;
+                              color: $font-darker;
+                              font-weight: 700;
+                              text-transform: uppercase;
+                              border-bottom: 1px solid #efefef;
+                              cursor: pointer;
+                              display: flex;
+                              justify-content: flex-end;
+                              align-items: center;
+                         }
+                    }
+                    > li {
+                         display: block;
+                         float: none;
+                         width: 100%;
+                         padding: 0;
+                         a {
+                              padding: 10px 15px;
+                              font-size: 16px;
+                              font-weight: 700;
+                              position: relative;
+                              .sub-arrow {
+                                   right: 20px;
+                                   position: absolute;
+                                   &:before {
+                                        content: "+";
+                                        font-family: inherit;
+                                        position: relative;
+                                   }
+                              }
+                         }
+                         .nav-submenu {
+                              width: 100%;
+                              padding: 0;
+                              position: relative;
+                              display: none;
+                              box-shadow: none;
+                              &.opensubmenu {
+                                   display: block;
+                              }
+                              li {
+                                   .nav-sub-childmenu {
+                                        display: none;
+                                        position: relative;
+                                        right: 0;
+                                        width: 100%;
+                                        padding: 0;
+                                        box-shadow: none;
+                                        &.submenu-content {
+                                             &.level2 {
+                                                  li {
+                                                       a {
+                                                            padding: 0 60px;
+                                                       }
+                                                  }
+                                                  .level3 {
+                                                       li {
+                                                            a {
+                                                                 padding: 0 70px;
+                                                            }
+                                                       }
+                                                  }
+                                             }
+                                        }
+                                        &.opensubchild {
+                                             display: block;
+                                        }
+                                        li {
+                                             a {
+                                                  padding: 0 45px;
+                                             }
+                                        }
+                                   }
+                                   a {
+                                        &:after {
+                                             display: none;
+                                        }
+                                        &:hover {
+                                             margin-left: 0;
+                                             &:after {
+                                                  display: none;
+                                             }
+                                        }
+                                   }
+                              }
+                         }
+                         .mega-menu-container {
+                              display: none;
+                              padding: 0 0 6px 0;
+                              &.opensubmenu {
+                                   display: block;
+                              }
+                              .mega-box {
+                                   width: 100%;
+                                   padding: 0;
+                                   .link-section {
+                                        .submenu-title {
+                                             position: relative;
+                                             h5 {
+                                                  margin-bottom: 0;
+                                                  font-weight: 600;
+                                                  line-height: 1.9;
+                                                  padding: 2px 18px;
+                                             }
+                                             .according-menu {
+                                                  top: 4px;
+                                             }
+                                        }
+                                        .submenu-content {
+                                             display: none;
+                                             &.opensubmegamenu {
+                                                  display: block;
+                                                  padding: 0 18px;
+                                             }
+                                             ul {
+                                                  li {
+                                                       a {
+                                                            line-height: 1.9;
+                                                            &:hover {
+                                                                 margin-left: 0;
+                                                                 &:after {
+                                                                      display: none;
+                                                                 }
+                                                            }
+                                                       }
+                                                  }
+                                             }
+                                        }
+                                        + .link-section {
+                                             margin-top: 0;
+                                        }
+                                   }
+                              }
+                         }
+                    }
+               }
+          }
+          .menu {
+               nav {
+                    margin-left: auto;
+                    margin-right: 30px;
+               }
+          }
+          .mega-menu-container {
+               .margin-deafult {
+                    margin-bottom: -15px;
+                    > div {
+                         margin-bottom: 15px;
+                    }
+               }
+               &.three-grid {
+                    .mega-box {
+                         margin-bottom: 0;
+                         .link-section {
+                              margin-bottom: 15px;
+                         }
+                    }
+               }
+          }
+          .according-menu {
+               position: absolute;
+               right: 15px;
+               &:after {
+                    content: "\f067";
+                    font-family: "Font Awesome 5 Free";
+                    font-weight: 900;
+                    font-size: 12px;
+                    position: absolute;
+                    right: 15px;
+                    top: -1px;
+               }
+          }
+          .menu-title {
+               &.active {
+                    .according-menu {
+                         &:after {
+                              content: "\f068";
+                         }
+                    }
+               }
+          }
+     }
+}

@@ -1,0 +1,125 @@
+/**=====================
+     team section css start
+==========================**/
+.team-section {
+    .title-section {
+        margin-bottom: calc(30px + (100 - 30) * ((100vw - 320px) / (1920 - 320)));
+    }
+    .team-wrapper {
+        padding-top: calc(50px + (100 - 50) * ((100vw - 320px) / (1920 - 320)));
+        .team-img {
+            text-align: center;
+            img {
+                width: 80%;
+                border-radius: 100%;
+                overflow: hidden;
+                @include mq-max(sm) {
+                    width: 100%;
+                }
+            }
+        }
+        .team-detail {
+            padding-top: calc(16px + (20 - 16) * ((100vw - 320px) / (1920 - 320)));
+            text-align: center;
+            position: relative;
+            h3 {
+                color: $primary-color;
+                font-weight: 700;
+                line-height: calc(30px + (36 - 30) * ((100vw - 320px) / (1920 - 320)));
+                font-size: calc(20px + (24 - 20) * ((100vw - 320px) / (1920 - 320)));
+                margin-bottom: 5px;
+            }
+            h6 {
+                color: $font-darker;
+                font-weight: 700;
+                margin-bottom: 6px;
+            }
+            p {
+                font-size: 16px;
+                line-height: 24px;
+                letter-spacing: 0.8px;
+            }
+            ul {
+                display: flex;
+                justify-content: center;
+                li {
+                    margin: 0 10px;
+                    svg {
+                        width: 20px;
+                        height: 20px;
+                        fill:#A9A9A9;
+                        transition: all 0.5s ease;
+                    }
+                    &.twitter {
+                        &:hover {
+                            svg {
+                                fill: $twitter;
+                                transition: all 0.5s ease;
+                            }
+                        }
+                    }
+                    &.facebook {
+                        &:hover {
+                            svg {
+                                fill: $facebook;
+                                transition: all 0.5s ease;
+                            }
+                        }
+                    }
+                    &.linkedin {
+                        &:hover {
+                            svg {
+                                fill: $linkedin;
+                                transition: all 0.5s ease;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.leadership-section {
+        .row {
+            margin-bottom: calc(-30px + (-80 - -30) * ((100vw - 320px) / (1920 - 320)));
+            > div {
+                margin-bottom: calc(30px + (80 - 30) * ((100vw - 320px) / (1920 - 320)));
+            }
+            @include mq-max(lg) {
+                max-width: 100%;
+            }
+            @include mq-max(md) {
+                margin: 0;
+            }
+        }
+        .team-wrapper {
+            .team-img {
+                img {
+                    border-radius: 10px;
+                }
+            }
+        }
+    }
+}
+
+.leadership-section {
+    position: relative;
+    .leader-desgin {
+        .curve {
+            position: absolute;
+            left: 0;
+            top: 0;
+            @include mq-max(xl) {
+                top: 30px;
+            }
+            @include mq-max(lg) {
+                top: 60px;
+            }
+        }
+        .shape {
+            position: absolute;
+            left: 0;
+            z-index: -1;
+            bottom: 0;
+        }
+    }
+}

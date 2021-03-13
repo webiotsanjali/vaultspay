@@ -1,0 +1,40 @@
+/**=====================
+     developer css start
+==========================**/
+.developer-section {
+    color: $white;
+    position: relative;
+    overflow: hidden;
+    @include mq-max(lg) {
+        color: $font-dark;
+    }
+    .row {
+        align-items: center;
+    }
+    h2 {
+        color: $white;
+        @include mq-max(lg) {
+            color: $font-dark;
+        }
+    }
+    .developer-left-bg {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 76%;
+        @include mq-max(lg) {
+            display: none;
+        }
+    }
+    .money-image {
+        @include mq-max(lg) {
+            margin-top: 50px;
+        }
+    }
+    .receive-data {
+        max-width: 85%;
+        @include mq-max(xl) {
+            max-width: 100%;
+        }
+    }
+}

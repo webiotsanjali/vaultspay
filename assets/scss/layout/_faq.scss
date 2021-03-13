@@ -1,0 +1,132 @@
+/**=====================
+     faq css start
+==========================**/
+.faq-wrapper {
+    justify-content: center;
+    margin-bottom: calc(-30px + (-60 - -30) * ((100vw - 320px) / (1920 - 320)));
+    @include mq-max(lg) {
+        margin-bottom: 0;
+    }
+    > div {
+        margin-bottom: calc(30px + (60 - 30) * ((100vw - 320px) / (1920 - 320)));
+        @include mq-max(3xl) {
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+        @include mq-max(lg) {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+    }
+}
+.faq-section {
+    .title-section {
+        p {
+            margin-bottom: calc(30px + (100 - 30) * ((100vw - 320px) / (1920 - 320)));
+        }
+    }
+    .accordion {
+        margin-bottom: -80px;
+        > .card {
+            overflow: unset;
+            margin-bottom: 80px;
+            @include mq-max(lg) {
+                margin-bottom: 30px;
+            }
+        }
+        .card {
+            border: 0;
+        }
+        .card-header {
+            padding: 0;
+            border: 0;
+            a {
+                font-size: calc(16px + (20 - 16) * ((100vw - 320px) / (1920 - 320)));
+                font-weight: 600;
+                line-height: 27px;
+                padding: calc(16px + (25 - 16) * ((100vw - 320px) / (1920 - 320))) calc(16px + (20 - 16) * ((100vw - 320px) / (1920 - 320)));
+                background-color: $secondary-color;
+                color: $white;
+                border-radius: 13px 13px 0 0;
+                transition: all 0.5s ease;
+                &.collapsed {
+                    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+                    border-radius: 13px;
+                    background-color: $white;
+                    transition: all 0.5s ease;
+                    color: rgba(68, 64, 64, 1);
+                }
+            }
+        }
+        .collapse {
+            transition: all 0.5s ease;
+            &.show {
+                margin-bottom: -50px;
+                transition: all 0.5s ease;
+                @include mq-max(lg) {
+                    margin-bottom: 0;
+                }
+            }
+        }
+        .card-body {
+            padding: 30px 20px;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 22px;
+            background-color: $secondary-color;
+            color: $white;
+            border-radius: 0 0 13px 13px;
+            @include mq-max(lg) {
+                padding: 0 20px 30px;
+            }
+        }
+        @include mq-max(lg) {
+            margin-bottom: 0;
+        }
+    }
+    @include mq-max(lg) {
+        margin-bottom: -30px;
+    }
+    .faq-wrap {
+        .media {
+            .faq-icon {
+                width: 72px;
+                height: 72px;
+                background: $light-bg;
+                border-radius: 100px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                @include mq-max(sm) {
+                    width: 60px;
+                    height: 60px;
+                    img {
+                        width: 20px;
+                    }
+                }
+            }
+            .media-body {
+                margin-left: calc(20px + (40 - 20) * ((100vw - 320px) / (1920 - 320)));
+                [dir="rtl"] & {
+                    margin-left: unset;
+                    margin-right: calc(20px + (40 - 20) * ((100vw - 320px) / (1920 - 320)));
+                }
+                h3 {
+                    font-size: calc(20px + (24 - 20) * ((100vw - 320px) / (1920 - 320)));
+                    color: $font-black-color;
+                    line-height: calc(28px + (32 - 28) * ((100vw - 320px) / (1920 - 320)));
+                    margin-bottom: 10px;
+                    font-weight: 600;
+                }
+                p {
+                    font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1920 - 320)));
+                    line-height: calc(18px + (26 - 18) * ((100vw - 320px) / (1920 - 320)));
+                    a {
+                        color: $primary-color;
+                        text-decoration: underline !important;
+                    }
+                }
+            }
+        }
+    }
+}

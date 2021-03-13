@@ -1,0 +1,157 @@
+/**=====================
+     money section css start
+==========================**/
+
+.send-steps {
+    position: relative;
+    .step-shape {
+        position: absolute;
+        top: -500px;
+        left: 0;
+        width: 43%;
+        [dir="rtl"] & {
+            left: unset;
+            right: 0;
+        }
+        @include mq-max(3xl) {
+            width: 50%;
+            top: -400px;
+        }
+        @include mq-max(xl) {
+            top: -250px;
+        }
+        @include mq-max(lg) {
+            top: 320px;
+        }
+    }
+    .step-wrapper {
+        padding: calc(30px + (50 - 30) * ((100vw - 320px) / (1920 - 320))) calc(20px + (40 - 20) * ((100vw - 320px) / (1920 - 320)));
+        box-shadow: 0px 0px 27px rgba($black, 0.25);
+        border-radius: 16px;
+        position: relative;
+        z-index: 2;
+        background: $white;
+        .row {
+            margin-bottom: calc(-30px + (-70 - -30) * ((100vw - 320px) / (1920 - 320)));
+            > div {
+                margin-bottom: calc(30px + (70 - 30) * ((100vw - 320px) / (1920 - 320)));
+                &.col-xl-3 {
+                    @include mq-max(3xl) {
+                        flex: 0 0 50%;
+                        max-width: 50%;
+                    }
+                    @include mq-max(md) {
+                        flex: 0 0 100%;
+                        max-width: 100%;
+                    }
+                }
+            }
+        }
+        .title-section {
+            h2 {
+                margin-top: -10px;
+            }
+        }
+        .step-wrap {
+            .media {
+                .step-number {
+                    font-weight: 600;
+                    font-size: calc(50px + (93 - 50) * ((100vw - 320px) / (1920 - 320)));
+                    line-height: calc(50px + (72 - 50) * ((100vw - 320px) / (1920 - 320)));
+                    color: $primary-color;
+                    opacity: 0.4;
+                }
+                .media-body {
+                    margin-left: calc(15px + (30 - 15) * ((100vw - 320px) / (1920 - 320)));
+                    [dir="rtl"] & {
+                        margin-left: unset;
+                        margin-right: calc(15px + (30 - 15) * ((100vw - 320px) / (1920 - 320)));
+                    }
+                    h3 {
+                        margin-bottom: calc(5px + (25 - 5) * ((100vw - 320px) / (1920 - 320)));
+                    }
+                    p {
+                        font-size:  calc(14px + (18 - 14) * ((100vw - 320px) / (1920 - 320)));
+                        line-height: 1.25;
+                    }
+                }
+            }
+        }
+        .step-image {
+            @include mq-max(lg) {
+                order: -1;
+            }
+        }
+    }
+    &.receive-steps {
+        position: relative;
+        .title-section {
+            @include rtl(text-align, left, right);
+        }
+        .receive-image {
+            margin-left: -168px;
+            [dir="rtl"] & {
+                margin-left: unset;
+                margin-right: -168px;
+            }
+            @include mq-max(3xl) {
+                margin-left: 0;
+                [dir="rtl"] & {
+                    margin-left: unset;
+                    margin-right: 0;
+                }
+            }
+        }
+        .receive-right {
+           position: absolute;
+           right: 0;
+           top: 58%;
+           transform: translateY(-58%);
+            [dir="rtl"] & {
+                left: 0;
+                right: unset;
+            }
+            @include mq-max(3xl) {
+                width: 40%;
+            }
+        }
+        .step-wrapper {
+            background: unset;
+            box-shadow: none;
+            padding: 0;
+            .step-wrap {
+                .media {
+                    .media-body {
+                        h3 {
+                            font-weight: 700;
+                        }
+                    }
+                }
+            }
+            > .row {
+                [class*="col-"] {
+                    @include mq-max(3xl) {
+                        flex: 0 0 50%;
+                        max-width: 50%;
+                        margin: 0;
+                    }
+                    @include mq-max(lg) {
+                        flex: 0 0 100%;
+                        max-width: 100%;
+                    }
+                }
+            }
+            
+        }
+        .receive-process {
+            li {
+                + li {
+                    margin-top: calc(30px + (60 - 30) * ((100vw - 320px) / (1920 - 320)));
+                }
+            }
+            @include mq-max(lg) {
+                margin-top: 30px;
+            }
+        }
+    }
+}

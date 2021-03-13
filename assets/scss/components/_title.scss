@@ -1,0 +1,16 @@
+/**=====================
+     title css start
+==========================**/
+.title-section {
+    text-align: center;
+    h2 {
+        margin-bottom: calc(10px + (30 - 10) * ((100vw - 320px) / (1920 - 320)));
+    }
+    p {
+        font-size: calc(16px + (25 - 16) * ((100vw - 320px) / (1920 - 320)));
+    }
+}
+
+.title-btm-space {
+    margin-bottom: calc(30px + (100 - 30) * ((100vw - 320px) / (1920 - 320)));
+}

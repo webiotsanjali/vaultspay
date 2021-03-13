@@ -1,0 +1,254 @@
+/**=====================
+     home page css start
+==========================**/
+
+// home section
+.home-section {
+    position: relative;
+    img {
+        width: 100%;
+    }
+    &::after{
+        position: absolute;
+        content: '';
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, rgba(67, 175, 102, 0.31) 31.77%, rgba(196, 196, 196, 0) 82.05%);
+    }
+    .home-content {
+        position: absolute;
+        top: 30%;
+        z-index: 1;
+        padding: calc(30px + (50 - 30) * ((100vw - 320px) / (1920 - 320))) 0 calc(30px + (50 - 30) * ((100vw - 320px) / (1920 - 320)));
+        @include mq-max(2xl) {
+            max-width: 80%;
+        }
+        @include mq-max(xl) {
+            max-width: 95%;
+        }
+        @include mq-max(lg) {
+            max-width: 36%;
+            top: 20%;
+        }
+        @include mq-max(md) {
+            max-width: 46%;
+            top: 15%;
+        }
+        @include mq-max(sm) {
+            max-width: 62%;
+            top: 0;
+        }
+        @include mq-max(xs) { 
+            max-width: 80%;
+        }
+        h1 {
+            color: $white;  
+            margin-bottom: 20px;
+            @include mq-max(sm) {
+                margin-bottom: 10px;
+            }
+        }
+        p {
+            font-size: calc(18px + (22 - 18) * ((100vw - 320px) / (1920 - 320)));
+            color: $white;
+            line-height: calc(30px + (42 - 30) * ((100vw - 320px) / (1920 - 320)));
+        }
+        .btn {
+            text-transform: uppercase;
+        }
+    }
+}
+
+// about section
+.about-section {
+    position: relative;
+    z-index: 1;
+    @include mq-max(4xl) {
+        padding-bottom: 30px;
+    }
+    .about-content {
+        h2 {
+            margin-bottom: calc(10px + (15 - 10) * ((100vw - 320px) / (1920 - 320)))
+        }
+        p {
+            line-height: 1.35;
+            font-size: calc(15px + (18 - 15) * ((100vw - 320px) / (1920 - 320)));
+            margin-bottom: calc(25px + (55 - 25) * ((100vw - 320px) / (1920 - 320)));
+        }
+        ul {
+            li {
+                font-size: calc(16px + (25 - 16) * ((100vw - 320px) / (1920 - 320)));
+                font-weight: 700;
+                line-height: calc(30px + (35 - 30) * ((100vw - 320px) / (1920 - 320)));
+                color: $font-dark;
+                position: relative;
+                margin-bottom: 15px;
+                padding-left: calc(45px + (58 - 45) * ((100vw - 320px) / (1920 - 320)));
+                background-size: 20px;
+                background-position: left;
+                [dir=rtl] & {
+                    padding-left: 0;
+                    padding-right: calc(45px + (65 - 45) * ((100vw - 320px) / (1920 - 320)));
+                }
+                &:after {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    top: 50%;
+                    background: url(../svg/global/right.svg) no-repeat 95%;
+                    width: 33px;
+                    height: 25px;
+                    transform: translateY(-50%);
+                    @include mq-max(xs) {
+                        background-size: 24px;
+                    }
+                    [dir=rtl] & {
+                        left: unset;
+                        right: 0; 
+                    }
+                }
+                &.btn-li {
+                    padding-left: 0;
+                    [dir=rtl] & {
+                        padding-left: unset;
+                        padding-right: 0;
+                    }
+                    &:after {
+                     display: none;
+                    }
+                }
+            }
+        }
+        .btn {
+            padding: calc(10px + (18 - 10) * ((100vw - 320px) / (1920 - 320))) calc(15px + (30 - 15) * ((100vw - 320px) / (1920 - 320)));
+        }
+    }
+    .about-img {
+        @include rtl(text-align, right, left);
+        img {
+            width: 95%;
+        }
+    }
+    .about-img1 {
+        @include rtl(text-align, right, left);
+    }
+    .about-bg {
+        position: absolute;
+        left: 0;
+        top: -110px;
+        z-index: -1;
+        [dir=rtl] & {
+            left: unset;
+            right: 0;
+        }
+    }
+    .mobile-about {
+        text-align: center;
+        margin-bottom: 20px;
+        img {
+            width: 60%;
+            margin: 0 auto;
+        }
+    }
+}
+
+// feature section 
+.feature-section {
+    background-image: url("../images/feature-bg.png");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom:  calc(30px + (80 - 30) * ((100vw - 320px) / (1920 - 320)));
+    @include mq-max(lg) {
+        background-position: left;
+    }
+    h2 {
+        text-align: center;
+        color: $white;
+        margin: calc(30px + (80 - 30) * ((100vw - 320px) / (1920 - 320))) 0;
+    }
+    .margin-def {
+        margin-bottom:  calc(-30px + (-80 - -30) * ((100vw - 320px) / (1920 - 320)));
+        > div {
+            margin-bottom:  calc(30px + (80 - 30) * ((100vw - 320px) / (1920 - 320)));
+        }
+    }
+    .feature-wrap {
+        display: flex;
+        align-items: center;
+        @include mq-max(xs) {
+            display: block;
+            align-items: center;
+            justify-content: center;
+        }
+        .icon-round {
+            width: 150px;
+            height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 100%;
+            background-color: $white;
+            margin-right: 55px;
+            [dir=rtl] & {
+                margin-right: 0;
+                margin-left: 55px;
+            }
+            img {
+                @include mq-max(xl) {
+                    width: 60%;
+                }
+            }
+            @include mq-max(xl) {
+                width: 110px;
+                height: 110px;
+                margin-right: 25px;
+                [dir=rtl] & {
+                    margin-right: 0;
+                    margin-left: 25px;
+                }
+            }
+            @include mq-max(lg) {
+                width: 90px;
+                height: 90px;
+            }
+            @include mq-max(xs) {
+                margin: 0 auto 15px;
+            }
+        }
+        .feature-content {
+            width: 60%;
+            h3 {
+                line-height: calc(36px + (42 - 36) * ((100vw - 320px) / (1920 - 320)));
+                color: $white;
+                font-weight: 700;
+            }
+            p {
+                font-size:  calc(16px + (20 - 16) * ((100vw - 320px) / (1920 - 320)));
+                color: $white;
+                line-height: 28px;
+                font-weight: 400;
+            }
+            @include mq-max(lg) {
+                width: 80%;
+            }
+            @include mq-max(xs) {
+                width: 100%;
+                margin: 0 auto;
+                text-align: center;
+            }
+        }
+    }
+}
+
+// create account
+.create-account {
+    .title-section {
+        p {
+            margin-bottom:  calc(20px + (50 - 20) * ((100vw - 320px) / (1920 - 320)));
+        }
+    }
+}
+
+// responsive

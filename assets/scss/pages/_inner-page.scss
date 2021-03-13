@@ -1,0 +1,65 @@
+/**=====================
+     inner page css start
+==========================**/
+
+// breadcrumb css 
+.money-bg {
+    background-image: url("../images/bg-money.jpg");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: $white;
+    &.receive-bg {
+        background-image: url("../images/bg-receive.jpg");
+        background-position: bottom;
+    }
+    h2 {
+        color: $white;
+    }
+    .row {
+        align-items: center;
+    }
+    h3 {
+        font-weight: 400;
+    }
+    .money-image {
+        @include mq-max(lg) {
+            margin-top: 30px;
+        }
+    }
+}
+
+.receive-data {
+    h3 {
+        line-height: 1.38;
+    }
+    .btn-white {
+        margin-top: calc(20px + (60 - 20) * ((100vw - 320px) / (1920 - 320)));
+        color: $secondary-color;
+        padding: 12px 32px;
+        @include mq-max(sm){
+            padding: 10px 20px;
+        }
+    }
+    @include mq-max(4xl) {
+        padding-left: 80px;
+        [dir="rtl"] & {
+            padding-left: unset;
+            padding-right: 80px;
+        }
+    }
+    @include mq-max(3xl) {
+        padding-left: 40px;
+        [dir="rtl"] & {
+            padding-left: unset;
+            padding-right: 40px;
+        }
+    }
+    @include mq-max(lg) {
+        padding-left: 0;
+        [dir="rtl"] & {
+            padding-left: unset;
+            padding-right: 0;
+        }
+    }
+}
