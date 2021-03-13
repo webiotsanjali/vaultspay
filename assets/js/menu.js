@@ -69,7 +69,7 @@ $( document ).ready(function() {
                      jQuery(this).removeClass('active');
                     jQuery(this).next().slideUp('normal');
                 }
-                jQuery(this).hide();
+                // jQuery(this).hide();
             });
            
         }
