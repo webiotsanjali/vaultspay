@@ -62,16 +62,16 @@ $( document ).ready(function() {
             jQuery('.mega-menu .menu-title').click(function () {
                 jQuery(this).removeClass('active');
                 jQuery(this).next().slideUp('normal');
-                if (jQuery(this).next().is(':hidden') == true) {
+                if (jQuery(this).next().is(':hidden') == false) {
                     jQuery(this).addClass('active');
                     jQuery(this).next().slideDown('normal');
                 } else {
                      jQuery(this).removeClass('active');
-                    // jQuery(this).next().slideUp('normal');
+                    jQuery(this).next().slideUp('normal');
                 }
             });
 
-             jQuery(this).hide();
+            //  jQuery(this).hide();
            
         }
         else if (windowSize > 1199) {
