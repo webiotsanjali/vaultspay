@@ -4,23 +4,74 @@
 
 // home section
 .home-section {
-    position: relative;
     img {
         width: 100%;
+        object-fit: cover;
+        height: 850px;
+        @include mq-max(4xl) { 
+            height: 763px;
+        }
+        @include mq-max(lg) { 
+            height:  unset;
+        }
     }
-    &::after{
+    .prev-arrow, .next-arrow {
         position: absolute;
-        content: '';
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(90deg, rgba(67, 175, 102, 0.31) 31.77%, rgba(196, 196, 196, 0) 82.05%);
+        top: 50%;
+        transform: translateY(-50%);
+        width: 30px;
+        height: 30px;
+        background-color: $white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 100%;
+        opacity: 0;
+        cursor: pointer;
+        i {
+            font-size: 12px;
+        }
+        @include mq-max(sm) { 
+            display: none !important;
+        }
+    }
+    .prev-arrow {
+        left: 0px;
+        z-index: 1;
+    }
+    .next-arrow {
+        right: 0px;
+    }
+    .home-slider {
+        .home-bg-image {
+            height: 100%;
+            &::after{
+                position: absolute;
+                content: '';
+                bottom: 5px;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(90deg, rgba(67, 175, 102, 0.31) 5%, rgba(196, 196, 196, 0) 15%);
+            }
+        }
+        &:hover {
+            .prev-arrow, .next-arrow {
+                opacity: 1;
+                transition: 0.5s;
+            }
+            .prev-arrow {
+                left: 30px;
+            }
+            .next-arrow {
+                right: 30px;
+            }
+        }
     }
     .home-content {
         position: absolute;
         top: 30%;
         z-index: 1;
-        padding: calc(30px + (50 - 30) * ((100vw - 320px) / (1920 - 320))) 0 calc(30px + (50 - 30) * ((100vw - 320px) / (1920 - 320)));
+        padding: calc(30px + (50 - 30) * ((100vw - 320px) / (1920 - 320))) 0 calc(30px + (50 - 30) * ((100vw - 320px) / (1920 - 320))) calc(40px + (50 - 40) * ((100vw - 320px) / (1920 - 320)));
         @include mq-max(2xl) {
             max-width: 80%;
         }
@@ -32,15 +83,16 @@
             top: 20%;
         }
         @include mq-max(md) {
-            max-width: 46%;
+            max-width: 10%;
             top: 15%;
         }
         @include mq-max(sm) {
-            max-width: 62%;
+            max-width: 10%;
             top: 0;
+            padding-left: 0;
         }
         @include mq-max(xs) { 
-            max-width: 80%;
+            max-width: 12%;
         }
         h1 {
             color: $white;  
@@ -75,6 +127,7 @@
             line-height: 1.35;
             font-size: calc(15px + (18 - 15) * ((100vw - 320px) / (1920 - 320)));
             margin-bottom: calc(25px + (55 - 25) * ((100vw - 320px) / (1920 - 320)));
+            text-align: justify;
         }
         ul {
             li {
@@ -84,7 +137,7 @@
                 color: $font-dark;
                 position: relative;
                 margin-bottom: 15px;
-                padding-left: calc(45px + (58 - 45) * ((100vw - 320px) / (1920 - 320)));
+                padding-left: calc(35px + (58 - 35) * ((100vw - 320px) / (1920 - 320)));
                 background-size: 20px;
                 background-position: left;
                 [dir=rtl] & {
@@ -92,14 +145,14 @@
                     padding-right: calc(45px + (65 - 45) * ((100vw - 320px) / (1920 - 320)));
                 }
                 &:after {
-                    content: "";
+                    content: "\f25a";
                     position: absolute;
                     left: 0;
-                    top: 50%;
-                    background: url(../svg/global/right.svg) no-repeat 95%;
-                    width: 33px;
-                    height: 25px;
-                    transform: translateY(-50%);
+                    top: 0;
+                    transform: rotate(90deg);
+                    font-family: "Font Awesome 5 Free";
+                    font-weight: 400;
+                    color: #43af66;
                     @include mq-max(xs) {
                         background-size: 24px;
                     }
@@ -109,11 +162,6 @@
                     }
                 }
                 &.btn-li {
-                    padding-left: 0;
-                    [dir=rtl] & {
-                        padding-left: unset;
-                        padding-right: 0;
-                    }
                     &:after {
                      display: none;
                     }
@@ -244,6 +292,8 @@
 
 // create account
 .create-account {
+    position: relative;
+    z-index: 1;
     .title-section {
         p {
             margin-bottom:  calc(20px + (50 - 20) * ((100vw - 320px) / (1920 - 320)));

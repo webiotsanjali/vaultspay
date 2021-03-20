@@ -3,10 +3,17 @@
 ==========================**/
 .app-section {
     position: relative;
+    .app-image {
+        position: relative;
+        z-index: 1;
+        img {
+            width: 80%;
+        }
+    }
     .shape-app {
         position: absolute;
         right: 0;
-        top: -530px;
+        top: -740px;
         z-index: -1;
         [dir=rtl] & {
             right: unset;
@@ -49,7 +56,7 @@
         .input-group {
             margin-bottom: calc(20px + (50 - 20) * ((100vw - 320px) / (1920 - 320)));
             .code-cls {
-                max-width: 64px;
+                max-width: 70px;
             }
             .form-control {
                 color: $black;

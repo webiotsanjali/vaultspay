@@ -82,6 +82,25 @@
                 order: -1;
             }
         }
+        .receive-process {
+            .btn-step {
+                padding-left: 75px;
+                [dir="rtl"] & {
+                    padding-left: unset;
+                    padding-right: 75px;
+                }
+                @include mq-max(lg) { 
+                    padding-left: 50px;
+                    [dir="rtl"] & {
+                        padding-left: unset;
+                        padding-right: 50px;
+                    }
+                }
+                .btn {
+                    text-transform: uppercase;
+                }
+            }
+        }
     }
     &.receive-steps {
         position: relative;
@@ -139,6 +158,9 @@
                         flex: 0 0 100%;
                         max-width: 100%;
                     }
+                }
+                @include mq-max(3xl) {
+                    margin-bottom: 0;
                 }
             }
             

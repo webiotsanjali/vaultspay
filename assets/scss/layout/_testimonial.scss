@@ -69,6 +69,8 @@
         height: 100%;
         z-index: 1;
         position: relative;
+        min-height: 430px;
+        margin-bottom: 30px;
         .rating-wrap {
             display: flex;
             align-items: flex-start;
@@ -84,8 +86,24 @@
         @include mq-max(3xl) {
             padding: 20px 30px;
         }
+        @include mq-max(xl) {
+            min-height:380px;
+        }
+        @media (max-width: 880px) {
+            min-height:300px;
+        }
         @include mq-max(md) {
             padding: 18px 20px;
+            min-height:320px;
+        }
+        @include mq-max(sm) {
+            min-height:380px;
+        }
+        @include mq-max(xs) {
+            min-height:400px;
+        }
+        @include mq-max(2xs) {
+            min-height:480px;
         }
         ul.rating {
             display: flex;

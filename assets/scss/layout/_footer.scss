@@ -2,7 +2,7 @@
      footer css start
 ==========================**/
 footer {
-    background-color: $dark-bg;
+    background-color: $black;
     padding: calc(40px + (130 - 40) * ((100vw - 320px) / (1920 - 320))) 0;
     .footer-main {
         padding-bottom: calc(20px + (60 - 30) * ((100vw - 320px) / (1920 - 320)));
@@ -58,7 +58,7 @@ footer {
                         }
                     }
                 }
-                @include mq-max(lg) {
+                @include mq-max(xl) {
                     margin-right: 34px;
                 }
                 @include mq-max(md) {

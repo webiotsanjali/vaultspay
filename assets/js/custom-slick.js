@@ -1,32 +1,42 @@
 /**=====================
      custom slick slider
 ==========================**/
-// $('.partners').slick({
-//     centerMode: true,
-//     centerPadding: '135px',
-//     slidesToShow: 4,
-//     dots: true,
-//     responsive: [
-//       {
-//         breakpoint: 768,
-//         settings: {
-//           arrows: false,
-//           centerMode: true,
-//           centerPadding: '40px',
-//           slidesToShow: 3
-//         }
-//       },
-//       {
-//         breakpoint: 480,
-//         settings: {
-//           arrows: false,
-//           centerMode: true,
-//           centerPadding: '40px',
-//           slidesToShow: 1
-//         }
-//       }
-//     ]
-//   });
+$('.home-slider').slick({
+    infinite: true,
+    speed: 1000,
+    arrows: true,
+    // autoplay: true,
+    prevArrow: '<div class="prev-arrow"><i class="fas fa-chevron-left"></i></div>',
+    nextArrow: '<div class="next-arrow"><i class="fas fa-chevron-right"></i></div>',
+}).slickAnimation();
+
+$('.testimonial-slider').slick({
+  infinite: true,
+  slidesToShow: 4,
+  speed: 1000,
+  arrows: false,
+  autoplay: false,
+  responsive: [
+    {
+      breakpoint: 1790,
+      settings: {
+        slidesToShow: 3
+      }
+    },
+    {
+      breakpoint: 1200,
+      settings: {
+        slidesToShow: 2
+      }
+    },
+    {
+      breakpoint: 881,
+      settings: {
+        slidesToShow: 1
+      }
+    }
+  ]
+}).slickAnimation();
 
 
 var $gallery = $('.partners');

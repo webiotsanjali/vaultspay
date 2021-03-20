@@ -20,6 +20,8 @@
   <!-- vendors -->
   <link rel="stylesheet" type="text/css" href="assets/css/vendors/bootstrap.css">
   <link rel="stylesheet" type="text/css" href="assets/css/vendors/font-awesome.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/vendors/slick.css">
+   <link rel="stylesheet" type="text/css" href="assets/css/vendors/slick-theme.css">
 
   <!-- animation css -->
   <link rel="stylesheet" href="assets/css/vendors/animate.css">
@@ -105,7 +107,7 @@
                       </div>
                     </li>
                     <li class="mega-menu">
-                      <a href="#" class="nav-link menu-title">for business <span class="according-menu d-xl-none d-inline-block"></span></a>
+                      <a href="#" class="nav-link menu-title">business <span class="according-menu d-xl-none d-inline-block"></span></a>
                       <div class="mega-menu-container menu-content three-grid">
                         <div class="container-fluid">
                           <div class="row margin-deafult">
@@ -159,7 +161,7 @@
                                   <a href="payment-management.html#paymentinvoice">Invoice managment</a>
                                 </div>
                                 <div class="submenu-content opensubmegamenu">
-                                  <p>Consolidate adn automate your invoice processes</p>
+                                  <p>Consolidate and automate your invoice processes</p>
                                 </div>
                               </div>
                               <div class="link-section">
@@ -252,16 +254,55 @@
 
   <!-- home section start -->
   <section class="home-section pt-0">
-    <div class="container-fluid p-0">
-      <img src="assets/images/main-bg.jpg" class="img-fluid" alt="">
-    </div>
-    <div class="container custom-container">
-      <div class="home-content wow fadeInLeft">
+    <div class="home-slider">
         <div>
-          <h1>Manage Money</h1>
-          <p>Conveniently make a payment anywhere in the world</p>
+          <div class="container-fluid p-0">
+            <div class="home-bg-image">
+              <img src="assets/images/main-bg.jpg" class="img-fluid" alt="">
+              <div class="container custom-container">
+                <div class="home-content" data-animation-in="fadeInLeft" data-delay-in="0.2">
+                  <div>
+                    <h1>Manage Money</h1>
+                    <p>Conveniently make a payment anywhere in the world</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
         </div>
-      </div>
+        <div>
+          <div class="container-fluid p-0">
+            <div class="home-bg-image">
+              <img src="assets/images/bg-1.jpg" class="img-fluid" alt="">
+              <div class="container custom-container">
+                <div class="home-content" data-animation-in="fadeInLeft" data-delay-in="0.2">
+                  <div>
+                    <h1>Manage Money</h1>
+                    <p>Conveniently make a payment anywhere in the world</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+         
+        </div>
+        <div>
+          <div class="container-fluid p-0">
+            <div class="home-bg-image">
+              <img src="assets/images/bg-2.jpg" class="img-fluid" alt="">
+              <div class="container custom-container">
+                <div class="home-content" data-animation-in="fadeInLeft" data-delay-in="0.2">
+                  <div>
+                    <h1>Manage Money</h1>
+                    <p>Conveniently make a payment anywhere in the world</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
     </div>
   </section>
   <!-- home section end -->
@@ -298,7 +339,7 @@
         </div>
         <div class="col-xl-6">
           <div class="about-img d-xl-block d-none">
-            <img src="assets/svg/about.svg" class="img-fluid" alt="">
+            <img src="assets/images/about.png" class="img-fluid" alt="">
           </div>
         </div>
       </div>
@@ -380,9 +421,9 @@
             <h2>What clients are saying about VaultsPay</h2>
             <p>A payments experience people love to talk about</p>
         </div>
-        <div class="row gy-3xl-5 space-bottom">
-            <div class="col-xl-3 col-lg-6">
-                <div class="testimonial-wrapper wow fadeInUp">
+        <div class="testimonial-slider gy-3xl-5 space-bottom">
+            <div>
+                <div class="testimonial-wrapper">
                     <div>
                         <div class="rating-wrap">
                             <img src="assets/images/testimonial/1.png" class="img-fluid" alt="">
@@ -408,8 +449,8 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xl-3 col-lg-6">
-                <div class="testimonial-wrapper wow fadeInUp">
+            <div>
+                <div class="testimonial-wrapper">
                     <div>
                         <div class="rating-wrap">
                             <img src="assets/images/testimonial/2.png" class="img-fluid" alt="">
@@ -434,8 +475,8 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xl-3 col-lg-6">
-                <div class="testimonial-wrapper wow fadeInUp">
+            <div>
+                <div class="testimonial-wrapper">
                     <div>
                         <div class="rating-wrap">
                             <img src="assets/images/testimonial/3.png" class="img-fluid" alt="">
@@ -444,7 +485,7 @@
                                 <li><img src="assets/svg/fill-star.svg" class="img-fluid" alt=""></li>
                                 <li><img src="assets/svg/fill-star.svg" class="img-fluid" alt=""></li>
                                 <li><img src="assets/svg/fill-star.svg" class="img-fluid" alt=""></li>
-                                <li><img src="assets/svg/border-star.svg" class="img-fluid" alt=""></li>
+                                <li><img src="assets/svg/half-star.svg" class="img-fluid" alt=""></li>
                             </ul>
                         </div>
                         <div class="testimonial-details">
@@ -462,8 +503,8 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xl-3 col-lg-6">
-                <div class="testimonial-wrapper wow fadeInUp">
+            <div>
+                <div class="testimonial-wrapper">
                     <div>
                         <div class="rating-wrap">
                             <img src="assets/images/testimonial/4.png" class="img-fluid" alt="">
@@ -472,7 +513,7 @@
                                 <li><img src="assets/svg/fill-star.svg" class="img-fluid" alt=""></li>
                                 <li><img src="assets/svg/fill-star.svg" class="img-fluid" alt=""></li>
                                 <li><img src="assets/svg/fill-star.svg" class="img-fluid" alt=""></li>
-                                <li><img src="assets/svg/border-star.svg" class="img-fluid" alt=""></li>
+                                <li><img src="assets/svg/fill-star.svg" class="img-fluid" alt=""></li>
                             </ul>
                         </div>
                         <div class="testimonial-details">
@@ -489,8 +530,8 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xl-3 col-lg-6">
-                <div class="testimonial-wrapper wow fadeInUp">
+            <div>
+                <div class="testimonial-wrapper">
                     <div>
                         <div class="rating-wrap">
                             <img src="assets/images/testimonial/5.png" class="img-fluid" alt="">
@@ -516,8 +557,8 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xl-3 col-lg-6">
-                <div class="testimonial-wrapper wow fadeInUp">
+            <div>
+                <div class="testimonial-wrapper">
                     <div>
                         <div class="rating-wrap">
                             <img src="assets/images/testimonial/6.png" class="img-fluid" alt="">
@@ -541,8 +582,8 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xl-3 col-lg-6">
-                <div class="testimonial-wrapper wow fadeInUp">
+            <div>
+                <div class="testimonial-wrapper">
                     <div>
                         <div class="rating-wrap">
                             <img src="assets/images/testimonial/7.png" class="img-fluid" alt="">
@@ -551,7 +592,7 @@
                                 <li><img src="assets/svg/fill-star.svg" class="img-fluid" alt=""></li>
                                 <li><img src="assets/svg/fill-star.svg" class="img-fluid" alt=""></li>
                                 <li><img src="assets/svg/fill-star.svg" class="img-fluid" alt=""></li>
-                                <li><img src="assets/svg/border-star.svg" class="img-fluid" alt=""></li>
+                                <li><img src="assets/svg/half-star.svg" class="img-fluid" alt=""></li>
                             </ul>
                         </div>
                         <div class="testimonial-details">
@@ -566,8 +607,8 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xl-3 col-lg-6">
-                <div class="testimonial-wrapper wow fadeInUp">
+            <div>
+                <div class="testimonial-wrapper">
                     <div>
                         <div class="rating-wrap">
                             <img src="assets/images/testimonial/8.png" class="img-fluid" alt="">
@@ -576,7 +617,7 @@
                                 <li><img src="assets/svg/fill-star.svg" class="img-fluid" alt=""></li>
                                 <li><img src="assets/svg/fill-star.svg" class="img-fluid" alt=""></li>
                                 <li><img src="assets/svg/fill-star.svg" class="img-fluid" alt=""></li>
-                                <li><img src="assets/svg/border-star.svg" class="img-fluid" alt=""></li>
+                                <li><img src="assets/svg/fill-star.svg" class="img-fluid" alt=""></li>
                             </ul>
                         </div>
                         <div class="testimonial-details">
@@ -602,7 +643,7 @@
     <div class="container custom-container">
       <div class="title-section">
         <h2>Create new account</h2>
-        <p>Create account and enjoy Vaultspay services</p>
+        <p>Create your account and enjoy VaultsPay services today</p>
       </div>
       <a href="#" class="btn btn-gradient">join us now</a>
     </div>
@@ -623,11 +664,10 @@
           <div class="app-content">
             <div>
               <h2>get the app</h2>
-              <h3>Download our app for the fastest, most convenient
-                way to send & get Payment.</h3>
+              <h3>Download our app for the fastest, most convenient way to send & receive payments</h3>
               <form>
                 <div class="input-group">
-                  <input type="text" class="form-control mr-3 code-cls" value="+92">
+                  <input type="text" class="form-control mr-3 code-cls" value="+971">
                   <input type="text" class="form-control" placeholder="Enter your number" value="3-- -----">
                   <div class="input-group-append">
                     <button class="btn btn-solid" type="button" id="button-addon2">Send link</button>
@@ -654,7 +694,7 @@
       <div class="row footer-main">
         <div class="col-lg-5 col-md-4">
           <div class="footer-logo">
-            <a href="#">
+            <a href="index.html">
               <img src="assets/images/logo.png" class="img-fluid" alt="">
             </a>
           </div>
@@ -662,7 +702,6 @@
         <div class="col-lg-7 col-md-8">
           <ul class="footer-links">
             <li><a href="about.html">ABOUT US</a></li>
-            <li><a href="#">FEE</a></li>
             <li><a href="#">PRIVACY POLICY</a></li>
             <li><a href="#">T&C’s</a></li>
             <li><a href="contact-us.html">CONTACT</a></li>
@@ -673,11 +712,12 @@
         <div class="col-12">
           <div class="footer-bottom">
             <ul class="social-icons">
-              <li><a href="#"><img src="assets/svg/social/footer/facebook.svg" class="img-fluid" alt="facebook"></a>
+              <li><a href="https://www.facebook.com/login"><img src="assets/svg/social/footer/facebook.svg" class="img-fluid" alt="facebook"></a>
               </li>
-              <li><a href="#"><img src="assets/svg/social/footer/instagram.svg" class="img-fluid" alt="instagram"></a>
+              <li><a href="https://www.instagram.com/"><img src="assets/svg/social/footer/instagram.svg" class="img-fluid" alt="instagram"></a>
               </li>
-              <li><a href="#"><img src="assets/svg/social/footer/twitter.svg" class="img-fluid" alt="twitter"></a></li>
+              <li><a href="https://twitter.com/login"><img src="assets/svg/social/footer/twitter.svg" class="img-fluid" alt="twitter"></a></li>
+              <li><a href="#"><img src="assets/images/footer-logo.png" class="img-fluid" alt="brand logo"></a></li>
             </ul>
             <p class="copyright">Copyright © 2020 VaultsPay | All Rights Reserved</p>
           </div>
@@ -699,6 +739,11 @@
 
   <!-- wow js-->
   <script src="assets/js/wow.min.js"></script>
+
+  <!-- slick js-->
+  <script src="assets/js/slick.js"></script>
+  <script src="assets/js/slick-animation.min.js"></script>
+  <script src="assets/js/custom-slick.js"></script>
 
   <!-- menu auto height -->
   <script src="assets/js/menu-height.js"></script>

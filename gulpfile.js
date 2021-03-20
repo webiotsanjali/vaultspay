@@ -19,7 +19,7 @@ function style() {
 // Watch function
 function watch() {
   browserSync.init({
-    proxy: 'localhost/project-html/vaultspay/payment-process.html'
+    proxy: 'localhost/project-html/vaultspay/index.html'
   });
   gulp.watch('assets/scss/**/*.scss', style);
   gulp.watch('*.html').on('change', browserSync.reload);
