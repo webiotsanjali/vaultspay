@@ -30,6 +30,7 @@
                 box-shadow: 0px 4px 12px rgba($black, 0.38);
                 border-radius: 12px;
                 .about-img {
+                    position: relative;
                     min-height: 100px;
                     margin-bottom: 35px;
                     @include mq-max(xl) {
@@ -72,6 +73,34 @@
                 @include mq-max(sm) {
                     padding: 15px;
                 }
+            }
+        }
+    }
+}
+
+.about-logo {
+    position: absolute;
+    display: flex;
+    top: 35%;
+    right: -30px;
+    padding: 10px;
+    background: $white;
+    @include mq-max(4xl) {
+        right: 0;
+    }
+    img {
+        width: 150px !important;
+        @include mq-max(4xl) {
+            width: 120px !important;
+        }
+        @include mq-max(3xl) {
+            width: 90px !important;
+        }
+        + img {
+            margin-left: 15px;
+            [dir="rtl"] & {
+                margin-left: unset;
+                margin-right: 15px;
             }
         }
     }

@@ -53,10 +53,21 @@
             line-height: calc(30px + (34 - 30) * ((100vw - 320px) / (1920 - 320)));
             margin-bottom:  calc(18px + (30 - 18) * ((100vw - 320px) / (1920 - 320)));
         }
-        .input-group {
+        form {
             margin-bottom: calc(20px + (50 - 20) * ((100vw - 320px) / (1920 - 320)));
+            .validation-feedback {
+                color: red;
+                padding-left: 86px;
+                [dir="rtl"] & {
+                    padding-left: unset;
+                    padding-right: 86px;
+                }
+            }
+        }
+        .input-group {
             .code-cls {
                 max-width: 70px;
+                appearance: none;
             }
             .form-control {
                 color: $black;

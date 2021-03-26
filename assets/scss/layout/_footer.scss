@@ -51,6 +51,18 @@ footer {
             li {
                 margin-right: 64px;
                 transition: all 0.5s ease;
+                .pci_logo {
+                    width: 200px;
+                    @include mq-max(3xl) {
+                        width: 130px;
+                    }
+                    @include mq-max(sm) {
+                        height: auto;
+                    }
+                    @include mq-max(xs) {
+                        width: 90px;
+                    }
+                }
                 a {
                     img {
                         @include mq-max(sm) {

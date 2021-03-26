@@ -460,8 +460,7 @@
                                         <div class="media">
                                             <img src="assets/svg/global/navigation.svg" class="img-fluid" alt="">
                                             <div class="media-body">
-                                                <h6>VaultsPay international<br/>
-                                                    Dubai, UAE.</h6>
+                                                <h6><span class="font-weight-bold">Business bay</span>, Opal Tower, 19th  Floor, Office 1908, Burj Khalifa St, Dubai,UAE</h6>
                                             </div>
                                         </div>
                                     </li>
@@ -469,7 +468,7 @@
                                         <div class="media">
                                             <img src="assets/svg/global/phone.svg" class="img-fluid" alt="">
                                             <div class="media-body">
-                                                <h6>+971 055/050/052/056/058</h6>
+                                                <h6>+971 4 576 6393</h6>
                                             </div>
                                         </div>
                                     </li>
@@ -477,7 +476,7 @@
                                         <div class="media">
                                             <img src="assets/svg/global/mail.svg" class="img-fluid" alt="">
                                             <div class="media-body">
-                                                <h6>hello@info.com.ng</h6>
+                                                <h6>OPS@vaultspay.ae</h6>
                                             </div>
                                         </div>
                                     </li>
@@ -497,7 +496,7 @@
                                     </li>
                                 </ul>
                                 <div class="contact-map">
-                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.1583091352!2d-74.11976373946229!3d40.69766374859258!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew+York%2C+NY%2C+USA!5e0!3m2!1sen!2sin!4v1563449626439!5m2!1sen!2sin" allowfullscreen="" frameBorder="0"></iframe>
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3610.520351314191!2d55.2737209!3d25.1856687!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f6832035a87d3%3A0x68d6a75e1cd735d6!2sOpal%20Tower!5e0!3m2!1sen!2sin!4v1616739504693!5m2!1sen!2sin" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                                 </div>
                             </div>
                         </div>
@@ -524,12 +523,18 @@
               <h3>Download our app for the fastest, most convenient way to send & receive payments</h3>
               <form>
                 <div class="input-group">
-                  <input type="text" class="form-control mr-3 code-cls" value="+971">
-                  <input type="text" class="form-control" placeholder="Enter your number" value="3-- -----">
+                  <select class="form-control mr-3 code-cls">
+                    <option selected>+971</option>
+                    <option>+96</option>
+                    <option>+93</option>
+                    <option>+33</option>
+                  </select>
+                  <input id="phonenumber" type="number" class="form-control" placeholder="Enter your number"  maxlength="10" required>
                   <div class="input-group-append">
-                    <button class="btn btn-solid" type="button" id="button-addon2">Send link</button>
+                    <button class="btn btn-solid" type="button" onclick="phone_number()">Send link</button>
                   </div>
                 </div>
+                <span id="feedback" class="validation-feedback"></span>
               </form>
               <ul class="app-buttons">
                 <li><a href="#"><img src="assets/svg/store-btn/appstore.svg" class="img-fluid" alt="appstore"></a></li>
@@ -573,7 +578,8 @@
                 <li><a href="https://www.instagram.com/"><img src="assets/svg/social/footer/instagram.svg" class="img-fluid" alt="instagram"></a>
                 </li>
                 <li><a href="https://twitter.com/login"><img src="assets/svg/social/footer/twitter.svg" class="img-fluid" alt="twitter"></a></li>
-                <li><a href="#"><img src="assets/images/footer-logo.png" class="img-fluid" alt="brand logo"></a></li>
+                <li><a href="#"><img src="assets/images/pci-logo.svg" class="img-fluid pci_logo" alt="brand logo"></a></li>
+                <li><a href="#"><img src="assets/images/sectigo.svg" class="img-fluid pci_logo" alt="brand logo"></a></li>
                 </ul>
                 <p class="copyright">Copyright © 2020 VaultsPay | All Rights Reserved</p>
             </div>
@@ -608,6 +614,13 @@
 
     <script>
         new WOW().init();
+
+        function phone_number() {
+            var inpObj = document.getElementById("phonenumber");
+            if (!inpObj.checkValidity()) {
+                document.getElementById("feedback").innerHTML = inpObj.validationMessage;
+            } 
+        }
     </script>
 
 </body>

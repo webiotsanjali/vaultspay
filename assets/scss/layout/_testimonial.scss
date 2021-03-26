@@ -73,7 +73,7 @@
         margin-bottom: 30px;
         .rating-wrap {
             display: flex;
-            align-items: flex-start;
+            align-items: center;
             justify-content: space-between;
             margin-bottom: 30px;
             @include mq-max(xs) {

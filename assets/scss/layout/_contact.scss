@@ -81,6 +81,14 @@
                             }
                         }
                     }
+                    .media-body {
+                        h6 {
+                            max-width: 330px;
+                            .font-weight-bold {
+                                color: $primary-color;
+                            }
+                        }
+                    }
                 }
             }
         }

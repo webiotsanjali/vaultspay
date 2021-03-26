@@ -398,12 +398,18 @@
               <h3>Download our app for the fastest, most convenient way to send & receive payments</h3>
               <form>
                 <div class="input-group">
-                  <input type="text" class="form-control mr-3 code-cls" value="+971">
-                  <input type="text" class="form-control" placeholder="Enter your number" value="3-- -----">
+                  <select class="form-control mr-3 code-cls">
+                    <option selected>+971</option>
+                    <option>+96</option>
+                    <option>+93</option>
+                    <option>+33</option>
+                  </select>
+                  <input id="phonenumber" type="number" class="form-control" placeholder="Enter your number"  maxlength="10" required>
                   <div class="input-group-append">
-                    <button class="btn btn-solid" type="button" id="button-addon2">Send link</button>
+                    <button class="btn btn-solid" type="button" onclick="phone_number()">Send link</button>
                   </div>
                 </div>
+                <span id="feedback" class="validation-feedback"></span>
               </form>
               <ul class="app-buttons">
                 <li><a href="#"><img src="assets/svg/store-btn/appstore.svg" class="img-fluid" alt="appstore"></a></li>
@@ -447,7 +453,8 @@
                 <li><a href="https://www.instagram.com/"><img src="assets/svg/social/footer/instagram.svg" class="img-fluid" alt="instagram"></a>
                 </li>
                 <li><a href="https://twitter.com/login"><img src="assets/svg/social/footer/twitter.svg" class="img-fluid" alt="twitter"></a></li>
-                <li><a href="#"><img src="assets/images/footer-logo.png" class="img-fluid" alt="brand logo"></a></li>
+                <li><a href="#"><img src="assets/images/pci-logo.svg" class="img-fluid pci_logo" alt="brand logo"></a></li>
+                <li><a href="#"><img src="assets/images/sectigo.svg" class="img-fluid pci_logo" alt="brand logo"></a></li>
                 </ul>
                 <p class="copyright">Copyright © 2020 VaultsPay | All Rights Reserved</p>
             </div>
@@ -482,6 +489,13 @@
 
     <script>
         new WOW().init();
+
+        function phone_number() {
+            var inpObj = document.getElementById("phonenumber");
+            if (!inpObj.checkValidity()) {
+                document.getElementById("feedback").innerHTML = inpObj.validationMessage;
+            } 
+        }
     </script>
 
 </body>
