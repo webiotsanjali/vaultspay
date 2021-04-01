@@ -923,24 +923,33 @@ header.header-dark {
         [dir="rtl"] .app-section .app-content form .validation-feedback {
           padding-left: unset;
           padding-right: 86px; }
-    .app-section .app-content .input-group .code-cls {
-      max-width: 70px;
-      -webkit-appearance: none;
-         -moz-appearance: none;
-              appearance: none; }
-    .app-section .app-content .input-group .form-control {
-      color: #000000;
-      border-color: #909090;
-      border-radius: 0;
-      height: auto;
-      padding: calc(13px + (18 - 13) * ((100vw - 320px) / (1920 - 320))) calc(10px + (16 - 10) * ((100vw - 320px) / (1920 - 320))); }
-    .app-section .app-content .input-group .btn {
-      border-radius: 0;
-      padding: calc(10px + (15 - 10) * ((100vw - 320px) / (1920 - 320))) calc(15px + (42 - 15) * ((100vw - 320px) / (1920 - 320)));
-      -webkit-box-shadow: none;
-              box-shadow: none;
-      text-transform: none;
-      font-weight: 400; }
+    .app-section .app-content .input-group {
+      /* Chrome, Safari, Edge, Opera */
+      /* Firefox */ }
+      .app-section .app-content .input-group .code-cls {
+        max-width: 70px;
+        -webkit-appearance: none;
+           -moz-appearance: none;
+                appearance: none; }
+      .app-section .app-content .input-group .form-control {
+        color: #000000;
+        border-color: #909090;
+        border-radius: 0;
+        height: auto;
+        padding: calc(13px + (18 - 13) * ((100vw - 320px) / (1920 - 320))) calc(10px + (16 - 10) * ((100vw - 320px) / (1920 - 320))); }
+      .app-section .app-content .input-group input::-webkit-outer-spin-button,
+      .app-section .app-content .input-group input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0; }
+      .app-section .app-content .input-group input[type=number] {
+        -moz-appearance: textfield; }
+      .app-section .app-content .input-group .btn {
+        border-radius: 0;
+        padding: calc(10px + (15 - 10) * ((100vw - 320px) / (1920 - 320))) calc(15px + (42 - 15) * ((100vw - 320px) / (1920 - 320)));
+        -webkit-box-shadow: none;
+                box-shadow: none;
+        text-transform: none;
+        font-weight: 400; }
     .app-section .app-content .app-buttons {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -2092,14 +2101,17 @@ footer {
       position: absolute;
       content: '';
       left: 0;
-      top: 10px;
-      width: 100%;
-      height: 100%;
-      background-image: url(../svg/global/right.svg);
-      background-repeat: no-repeat; }
+      top: 6px;
+      width: 21px;
+      height: 21px;
+      background-image: url(../images/favicon.png);
+      background-repeat: no-repeat;
+      background-size: cover; }
       @media (max-width: 767px) {
         .about-section .about-content ul li:after {
-          background-size: 20px; } }
+          top: 8px;
+          width: 18px;
+          height: 18px; } }
       [dir=rtl] .about-section .about-content ul li:after {
         left: unset;
         right: 0; }

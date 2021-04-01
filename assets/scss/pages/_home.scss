@@ -148,13 +148,16 @@
                     position: absolute;
                     content: '';
                     left: 0;
-                    top: 10px;
-                    width: 100%;
-                    height: 100%;
-                    background-image: url(../svg/global/right.svg);
+                    top: 6px;
+                    width: 21px;
+                    height: 21px;
+                    background-image: url(../images/favicon.png);
                     background-repeat: no-repeat;
+                    background-size: cover;
                     @include mq-max(md) {
-                        background-size: 20px;
+                        top: 8px;
+                        width: 18px;
+                        height: 18px;
                     }
                     [dir=rtl] & {
                         left: unset;

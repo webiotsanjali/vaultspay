@@ -283,7 +283,7 @@
     <!-- feature section start -->
     <section class="about-section section-b-space about-2 pb-0">
         <div class="container custom-container">
-          <div class="row justify-content-end">
+          <div class="row justify-content-end align-items-center">
               <div class="col-lg-6 about-left">
                 <h3>Whether making payments to your friends and family, buying online, or processing payments for your business, our adaptable solution can fulfill all of your needs </h3>
               </div>
@@ -380,7 +380,12 @@
                     <option>+93</option>
                     <option>+33</option>
                   </select>
-                  <input id="phonenumber" type="number" class="form-control" placeholder="Enter your number"  maxlength="10" required>
+                  <input id="phonenumber" 
+                    type="number" 
+                    class="form-control" 
+                    placeholder="Enter your number"
+                    oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"  
+                    maxlength="9" required>
                   <div class="input-group-append">
                     <button class="btn btn-solid" type="button" onclick="phone_number()">Send link</button>
                   </div>
@@ -472,6 +477,14 @@
                 document.getElementById("feedback").innerHTML = inpObj.validationMessage;
             } 
         }
+
+        // number js
+        $(document).on('input','#phonenumber',function(){
+            var phone=$('#phonenumber').val();
+            if(phone.indexOf('0') === 0){
+                $('#phonenumber').val('');
+            }
+        });
     </script>
 
 </body>

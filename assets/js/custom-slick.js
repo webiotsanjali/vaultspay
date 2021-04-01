@@ -16,6 +16,7 @@ $('.testimonial-slider').slick({
   speed: 1000,
   arrows: false,
   autoplay: true,
+  autoplaySpeed: 2000,
   responsive: [
     {
       breakpoint: 1790,

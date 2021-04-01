@@ -76,6 +76,16 @@
                 height: auto;
                 padding:  calc(13px + (18 - 13) * ((100vw - 320px) / (1920 - 320))) calc(10px + (16 - 10) * ((100vw - 320px) / (1920 - 320)));
             }
+            /* Chrome, Safari, Edge, Opera */
+            input::-webkit-outer-spin-button,
+            input::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+            }
+            /* Firefox */
+            input[type=number] {
+                -moz-appearance: textfield;
+            }
             .btn {
                 border-radius: 0;
                 padding: calc(10px + (15 - 10) * ((100vw - 320px) / (1920 - 320))) calc(15px + (42 - 15) * ((100vw - 320px) / (1920 - 320)));
