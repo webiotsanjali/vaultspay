@@ -11,8 +11,20 @@
         @include mq-max(4xl) { 
             height: 763px;
         }
-        @include mq-max(lg) { 
-            height:  unset;
+        @include mq-max(sm) { 
+            height:  550px;
+        }
+    }
+    .btn {
+        min-width: 170px;
+        margin-top: calc(30px + (60 - 30) * ((100vw - 320px) / (1920 - 320)));
+        text-transform: capitalize;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        font-weight: 400;
+        @include mq-max(sm) { 
+            padding: 8px 20px;
+            min-width: 130px;
         }
     }
     .prev-arrow, .next-arrow {
@@ -45,14 +57,15 @@
     .home-slider {
         .home-bg-image {
             height: 100%;
-            &::after{
-                position: absolute;
-                content: '';
-                bottom: 5px;
-                width: 100%;
-                height: 100%;
-                background: linear-gradient(90deg, rgba(67, 175, 102, 0.31) 5%, rgba(196, 196, 196, 0) 15%);
-            }
+            position: relative;
+            // &::after{
+            //     position: absolute;
+            //     content: '';
+            //     bottom: 5px;
+            //     width: 100%;
+            //     height: 100%;
+            //     background: linear-gradient(90deg, rgba(67, 175, 102, 0.31) 5%, rgba(196, 196, 196, 0) 15%);
+            // }
         }
         &:hover {
             .prev-arrow, .next-arrow {
@@ -71,28 +84,30 @@
         position: absolute;
         top: 30%;
         z-index: 1;
-        padding: calc(30px + (50 - 30) * ((100vw - 320px) / (1920 - 320))) 0 calc(30px + (50 - 30) * ((100vw - 320px) / (1920 - 320))) calc(40px + (50 - 40) * ((100vw - 320px) / (1920 - 320)));
-        @include mq-max(2xl) {
-            max-width: 80%;
+        padding-left: 30px;
+        width: 41%;
+        [dir="rtl"] & {
+            padding-left: unset;
+            padding-right: 30px;
         }
-        @include mq-max(xl) {
-            max-width: 95%;
+        @include mq-max(3xl) {
+            width: 51%;
+            padding-left: 50px;
+            [dir="rtl"] & {
+                padding-left: unset;
+                padding-right: 50px;
+            }
         }
         @include mq-max(lg) {
-            max-width: 36%;
-            top: 20%;
-        }
-        @include mq-max(md) {
-            max-width: 10%;
-            top: 15%;
+            width: 72%;
         }
         @include mq-max(sm) {
-            max-width: 10%;
-            top: 0;
+            width: 90%;
             padding-left: 0;
-        }
-        @include mq-max(xs) { 
-            max-width: 12%;
+            [dir="rtl"] & {
+                padding-left: unset;
+                padding-right: 0;
+            }
         }
         h1 {
             color: $white;  
@@ -105,10 +120,16 @@
             font-size: calc(18px + (22 - 18) * ((100vw - 320px) / (1920 - 320)));
             color: $white;
             line-height: calc(30px + (42 - 30) * ((100vw - 320px) / (1920 - 320)));
+            width: 73%;
+            @include mq-max(lg) {
+                width: 100%;
+            }
         }
-        .btn {
-            text-transform: uppercase;
-        }
+    }
+    .text-default {
+       h1, p {
+        color: $primary-color ; 
+       }
     }
 }
 
