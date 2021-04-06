@@ -26,6 +26,9 @@
     <!-- animation css -->
     <link rel="stylesheet" href="assets/css/vendors/animate.css">
 
+    <!-- country flag css -->
+    <link rel="stylesheet" href="assets/css/vendors/intlTelInput.css">
+
     <!-- Theme css -->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
@@ -461,22 +464,9 @@
               <h2>get the app</h2>
               <h3>Download our app for the fastest, most convenient way to send & receive payments</h3>
               <form>
-                <div class="input-group">
-                  <select class="form-control mr-3 code-cls">
-                    <option selected>+971</option>
-                    <option>+96</option>
-                    <option>+93</option>
-                    <option>+33</option>
-                  </select>
-                  <input id="phonenumber" 
-                    type="number" 
-                    class="form-control" 
-                    placeholder="Enter your number"
-                    oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"  
-                    maxlength="9" required>
-                  <div class="input-group-append">
-                    <button class="btn btn-solid" type="button" onclick="phone_number()">Send link</button>
-                  </div>
+                <div class="form-group mb-0">
+                  <input id="mobile-no" type="number" class="form-control" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="9" required>
+                  <button class="btn btn-solid" type="button" onclick="phone_number()">Send link</button>
                 </div>
                 <span id="feedback" class="validation-feedback"></span>
               </form>
@@ -553,6 +543,9 @@
     <script src="assets/js/menu-height.js"></script>
     <script src="assets/js/menu.js"></script>
 
+    <!-- country flag select js -->
+    <script src="assets/js/intlTelInput.js"></script>
+
     <!-- custom script -->
     <script src="assets/js/script.js"></script>
 
@@ -560,18 +553,23 @@
         new WOW().init();
 
         function phone_number() {
-            var inpObj = document.getElementById("phonenumber");
+            var inpObj = document.getElementById("mobile-no");
             if (!inpObj.checkValidity()) {
                 document.getElementById("feedback").innerHTML = inpObj.validationMessage;
             } 
         }
 
         // number js
-        $(document).on('input','#phonenumber',function(){
-            var phone=$('#phonenumber').val();
+        $(document).on('input','#mobile-no',function(){
+            var phone=$('#mobile-no').val();
             if(phone.indexOf('0') === 0){
-                $('#phonenumber').val('');
+                $('#mobile-no').val('');
             }
+        });
+
+        var input = document.querySelector("#mobile-no");
+        window.intlTelInput(input, {
+            utilsScript: "assets/js/utils.js",
         });
     </script>
 

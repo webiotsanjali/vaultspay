@@ -919,10 +919,10 @@ header.header-dark {
       margin-bottom: calc(20px + (50 - 20) * ((100vw - 320px) / (1920 - 320))); }
       .app-section .app-content form .validation-feedback {
         color: red;
-        padding-left: 86px; }
+        padding-left: 60px; }
         [dir="rtl"] .app-section .app-content form .validation-feedback {
           padding-left: unset;
-          padding-right: 86px; }
+          padding-right: 60px; }
     .app-section .app-content .input-group {
       /* Chrome, Safari, Edge, Opera */
       /* Firefox */ }
@@ -943,13 +943,22 @@ header.header-dark {
         margin: 0; }
       .app-section .app-content .input-group input[type=number] {
         -moz-appearance: textfield; }
-      .app-section .app-content .input-group .btn {
-        border-radius: 0;
-        padding: calc(10px + (15 - 10) * ((100vw - 320px) / (1920 - 320))) calc(15px + (42 - 15) * ((100vw - 320px) / (1920 - 320)));
-        -webkit-box-shadow: none;
-                box-shadow: none;
-        text-transform: none;
-        font-weight: 400; }
+    .app-section .app-content .form-group {
+      position: relative; }
+    .app-section .app-content .btn {
+      border-radius: 0;
+      padding: calc(10px + (15 - 10) * ((100vw - 320px) / (1920 - 320))) calc(15px + (42 - 15) * ((100vw - 320px) / (1920 - 320)));
+      -webkit-box-shadow: none;
+              box-shadow: none;
+      text-transform: none;
+      font-weight: 400;
+      position: absolute;
+      right: 0;
+      top: 0px;
+      height: 100%; }
+      @media (max-width: 576px) {
+        .app-section .app-content .btn {
+          font-size: 14px; } }
     .app-section .app-content .app-buttons {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -968,6 +977,25 @@ header.header-dark {
     @media (max-width: 767px) {
       .app-section .app-content {
         margin: 20px 0; } }
+
+.iti--allow-dropdown .iti__flag-container .iti__selected-flag {
+  border: 1px solid #909090; }
+  .iti--allow-dropdown .iti__flag-container .iti__selected-flag:focus {
+    outline: 1px solid #909090; }
+
+.iti--allow-dropdown .iti__flag-container:hover {
+  border: none; }
+
+.iti input[type=number] {
+  padding: calc(13px + (18 - 13) * ((100vw - 320px) / (1920 - 320))) calc(10px + (16 - 10) * ((100vw - 320px) / (1920 - 320)));
+  height: unset;
+  margin-left: 60px;
+  border-color: #909090;
+  border-radius: 0;
+  width: calc(100% - 60px); }
+  [dir="rtl"] .iti input[type=number] {
+    margin-left: unset;
+    margin-right: 60px; }
 
 /**=====================
      team section css start
