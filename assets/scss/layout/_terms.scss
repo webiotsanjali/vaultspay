@@ -1,0 +1,62 @@
+/**=====================
+     terms section css start
+==========================**/
+.condition-section {
+    h2 {
+        text-transform: capitalize;
+    }
+    .about-content {
+        .terms-details {
+            + .terms-details {
+                margin-top: calc(30px + (60 - 30) * ((100vw - 320px) / (1920 - 320)));
+            }
+            h2 {
+                margin-bottom: calc(20px + (40 - 20) * ((100vw - 320px) / (1920 - 320)));
+            }
+           ul {
+               li {
+                p {
+                    margin-bottom: 0;
+                    a {
+                        text-decoration: underline !important;
+                    }
+                }
+               }
+           }
+
+           ul.list-none {
+               > li {
+                   font-size: calc(15px + (18 - 15) * ((100vw - 320px) / (1920 - 320)));
+                   font-weight: 400;
+                   padding-left: 0;
+                   [dir=rtl] & {
+                        padding-left: unset;
+                        padding-right: 0;
+                   }
+                   &::after {
+                       display: none;
+                   }
+               }
+           }
+           .terms-list {
+                margin-top: calc(15px + (30 - 15) * ((100vw - 320px) / (1920 - 320)));
+                margin-bottom: calc(15px + (30 - 15) * ((100vw - 320px) / (1920 - 320)));
+                li {
+                    h5 {
+                        text-decoration: underline;
+                    }
+                    &:after {
+                        top: 4px;
+                        @include mq-max(md) {
+                            top: 2px;
+                        }
+                    }
+                }
+           }
+        }
+    }
+    
+}
+/**=====================
+     terms section css end
+==========================**/

@@ -69,13 +69,17 @@
         height: 100%;
         z-index: 1;
         position: relative;
-        min-height: 430px;
+        min-height: 410px;
         margin-bottom: 30px;
         .rating-wrap {
             display: flex;
             align-items: center;
             justify-content: space-between;
             margin-bottom: 30px;
+            > img {
+                width: auto;
+                height: 28px;
+            }
             @include mq-max(xs) {
                 display: block;
             }
@@ -83,10 +87,17 @@
         .testimonial-details {
             padding-bottom: 60px;
         }
+        @include mq-max(4xl) {
+            min-height:390px;
+        }
         @include mq-max(3xl) {
             padding: 20px 30px;
+            min-height:380px;
         }
         @include mq-max(xl) {
+            min-height:360px;
+        }
+        @include mq-max(lg) {
             min-height:380px;
         }
         @media (max-width: 880px) {
@@ -97,26 +108,24 @@
             min-height:320px;
         }
         @include mq-max(sm) {
-            min-height:380px;
+            min-height:350px;
         }
         @include mq-max(xs) {
             min-height:400px;
         }
         @include mq-max(2xs) {
-            min-height:480px;
+            min-height:440px;
         }
         ul.rating {
             display: flex;
             li {
                 margin-right: 5px;
                 img {
-                    @include mq-max(md) {
-                        width: 20px;
-                    }
+                    width: 18px;
                 }
             }
             @include mq-max(xs) {
-                margin-top: 5px;
+                margin-top: 10px;
             }
         }
         h6 {
@@ -125,6 +134,9 @@
             line-height: 28px;
             letter-spacing: 0.2px;
             color: #737373;
+            @include mq-max(2xs) {
+                line-height: 24px;
+            }
         }
         .user {
             position: absolute;

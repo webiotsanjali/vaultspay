@@ -1678,7 +1678,7 @@ header.header-dark {
     height: 100%;
     z-index: 1;
     position: relative;
-    min-height: 430px;
+    min-height: 410px;
     margin-bottom: 30px; }
     .testimonial-section .testimonial-wrapper .rating-wrap {
       display: -webkit-box;
@@ -1691,15 +1691,25 @@ header.header-dark {
           -ms-flex-pack: justify;
               justify-content: space-between;
       margin-bottom: 30px; }
+      .testimonial-section .testimonial-wrapper .rating-wrap > img {
+        width: auto;
+        height: 28px; }
       @media (max-width: 420px) {
         .testimonial-section .testimonial-wrapper .rating-wrap {
           display: block; } }
     .testimonial-section .testimonial-wrapper .testimonial-details {
       padding-bottom: 60px; }
+    @media (max-width: 1630px) {
+      .testimonial-section .testimonial-wrapper {
+        min-height: 390px; } }
     @media (max-width: 1460px) {
       .testimonial-section .testimonial-wrapper {
-        padding: 20px 30px; } }
+        padding: 20px 30px;
+        min-height: 380px; } }
     @media (max-width: 1199px) {
+      .testimonial-section .testimonial-wrapper {
+        min-height: 360px; } }
+    @media (max-width: 991px) {
       .testimonial-section .testimonial-wrapper {
         min-height: 380px; } }
     @media (max-width: 880px) {
@@ -1711,31 +1721,33 @@ header.header-dark {
         min-height: 320px; } }
     @media (max-width: 576px) {
       .testimonial-section .testimonial-wrapper {
-        min-height: 380px; } }
+        min-height: 350px; } }
     @media (max-width: 420px) {
       .testimonial-section .testimonial-wrapper {
         min-height: 400px; } }
     @media (max-width: 360px) {
       .testimonial-section .testimonial-wrapper {
-        min-height: 480px; } }
+        min-height: 440px; } }
     .testimonial-section .testimonial-wrapper ul.rating {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex; }
       .testimonial-section .testimonial-wrapper ul.rating li {
         margin-right: 5px; }
-        @media (max-width: 767px) {
-          .testimonial-section .testimonial-wrapper ul.rating li img {
-            width: 20px; } }
+        .testimonial-section .testimonial-wrapper ul.rating li img {
+          width: 18px; }
       @media (max-width: 420px) {
         .testimonial-section .testimonial-wrapper ul.rating {
-          margin-top: 5px; } }
+          margin-top: 10px; } }
     .testimonial-section .testimonial-wrapper h6 {
       font-size: calc(15px + (18 - 15) * ((100vw - 320px) / (1920 - 320)));
       font-weight: 600;
       line-height: 28px;
       letter-spacing: 0.2px;
       color: #737373; }
+      @media (max-width: 360px) {
+        .testimonial-section .testimonial-wrapper h6 {
+          line-height: 24px; } }
     .testimonial-section .testimonial-wrapper .user {
       position: absolute;
       bottom: 30px; }
@@ -1891,6 +1903,47 @@ header.header-dark {
       color: #059BC7;
       text-decoration: underline !important; }
 
+/**=====================
+     terms section css start
+==========================**/
+.condition-section h2 {
+  text-transform: capitalize; }
+
+.condition-section .about-content .terms-details + .terms-details {
+  margin-top: calc(30px + (60 - 30) * ((100vw - 320px) / (1920 - 320))); }
+
+.condition-section .about-content .terms-details h2 {
+  margin-bottom: calc(20px + (40 - 20) * ((100vw - 320px) / (1920 - 320))); }
+
+.condition-section .about-content .terms-details ul li p {
+  margin-bottom: 0; }
+  .condition-section .about-content .terms-details ul li p a {
+    text-decoration: underline !important; }
+
+.condition-section .about-content .terms-details ul.list-none > li {
+  font-size: calc(15px + (18 - 15) * ((100vw - 320px) / (1920 - 320)));
+  font-weight: 400;
+  padding-left: 0; }
+  [dir=rtl] .condition-section .about-content .terms-details ul.list-none > li {
+    padding-left: unset;
+    padding-right: 0; }
+  .condition-section .about-content .terms-details ul.list-none > li::after {
+    display: none; }
+
+.condition-section .about-content .terms-details .terms-list {
+  margin-top: calc(15px + (30 - 15) * ((100vw - 320px) / (1920 - 320)));
+  margin-bottom: calc(15px + (30 - 15) * ((100vw - 320px) / (1920 - 320))); }
+  .condition-section .about-content .terms-details .terms-list li h5 {
+    text-decoration: underline; }
+  .condition-section .about-content .terms-details .terms-list li:after {
+    top: 4px; }
+    @media (max-width: 767px) {
+      .condition-section .about-content .terms-details .terms-list li:after {
+        top: 2px; } }
+
+/**=====================
+     terms section css end
+==========================**/
 /**=====================
      footer css start
 ==========================**/

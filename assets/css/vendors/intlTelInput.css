@@ -123,8 +123,6 @@
 
 .iti__flag {
   width: 20px;
-  height: 20px !important;
-  border-radius: 100%;
  }
 .iti__flag.iti__be {
   width: 18px; }
@@ -922,7 +920,7 @@
   background-image: url("../../images/flag-image/flags.png");
   background-repeat: no-repeat;
   background-color: #DBDBDB;
-  background-size: cover;
+  /* background-size: cover; */
   background-position: 20px 0; }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .iti__flag {
